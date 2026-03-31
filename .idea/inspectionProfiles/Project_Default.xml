@@ -1,0 +1,23 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="s" />
+          <option value="pytest-html" />
+          <option value="pytest-xdist" />
+          <option value="alembic" />
+          <option value="databases" />
+          <option value="websockets" />
+          <option value="black" />
+          <option value="isort" />
+          <option value="mypy" />
+          <option value="pytest-asyncio" />
+          <option value="loguru" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block title %}AI张老师·志愿咨询助手{% endblock %}
+
+{% block content %}
+<div class="app-wrapper">
+    <!-- 头部区域 -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>AI张老师·数字分身</h1>
+                    <p class="subtitle">高考与考研志愿规划专家</p>
+                </div>
+            </div>
+            <div class="header-tagline">
+                <span class="tagline">谨以此纪念张雪峰老师</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区域 -->
+    <main class="main-content">
+        <div class="chat-container">
+            <!-- 聊天历史区域 -->
+            <div class="chat-history" id="chatHistory">
+                <div class="welcome-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="sender-name">AI张老师</span>
+                            <span class="message-time">现在</span>
+                        </div>
+                        <div class="message-text">
+                            你好！我是AI张老师。高考志愿、考研选择、专业就业前景帮你指导！
+                            <br><br>
+                            <strong>包括</strong>
+                            <ul>
+                                <li>分析不同专业的就业前景</li>
+                                <li>推荐适合普通家庭的专业方向</li>
+                                <li>对比不同院校的优势专业</li>
+                                <li>规划考研和职业发展路径</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 输入区域 -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <div class="input-container">
+                        <textarea 
+                            id="questionInput" 
+                            placeholder="输入你的问题，比如：'计算机专业前景怎么样？' 或 '普通家庭学什么专业好？'..."
+                            rows="3"
+                        ></textarea>
+                        <div class="input-actions">
+                            <button class="btn-send" id="sendButton">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>发送</span>
+                            </button>
+                            <button class="btn-voice" id="voiceButton">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="input-hint">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>按 Enter 发送，Shift+Enter 换行</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 侧边栏信息 -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3><i class="fas fa-star"></i> 风格</h3>
+                <ul class="style-list">
+                    <li><i class="fas fa-check-circle"></i> 幽默直率，充满激情</li>
+                    <li><i class="fas fa-check-circle"></i> 以就业为导向</li>
+                    <li><i class="fas fa-check-circle"></i> 务实建议，不画大饼</li>
+                    <li><i class="fas fa-check-circle"></i> 具体案例说明问题</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-card">
+                <h3><i class="fas fa-book"></i> 知识库涵盖</h3>
+                <ul class="knowledge-list">
+                    <li>500+个专业分析</li>
+                    <li>300+所院校评估</li>
+                    <li>就业市场数据</li>
+                    <li>考研政策解读</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-card">
+                <h3><i class="fas fa-volume-up"></i> 语音功能</h3>
+                <div class="audio-controls">
+                    <div class="audio-toggle">
+                        <label class="switch">
+                            <input type="checkbox" id="audioToggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span>语音回复</span>
+                    </div>
+                    <div class="audio-player" id="audioPlayer" style="display: none;">
+                        <audio id="audioElement" controls></audio>
+                    </div>
+                    <div class="audio-status" id="audioStatus" style="margin-top: 10px; font-size: 0.85rem; color: #7f8c8d;">
+                        语音状态: 待检测
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- 加载状态 -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <i class="fas fa-comments"></i>
+            </div>
+            <p>在思考中...</p>
+            <p class="loading-subtext">"这个问题需要好好分析分析"</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{# JavaScript functionality handled by main.js #}
+{% endblock %}

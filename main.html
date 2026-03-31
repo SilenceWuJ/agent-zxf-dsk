@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI张老师·数字分身</title>
+</head>
+<body>
+    <h1>AI张老师·志愿咨询助手</h1>
+    <input type="text" id="question" style="width: 500px;" placeholder="输入你的问题...">
+    <button onclick="ask()">提问</button>
+    <div id="answer"></div>
+    <audio id="audio" controls style="display:none"></audio>
+
+    <script>
+        async function ask() {
+            const q = document.getElementById('question').value;
+            const response = await fetch('/chat', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({question: q})
+            });
+            const data = await response.json();
+            document.getElementById('answer').innerText = data.answer;
+
+            if (data.audio_base64) {
+                const audio = document.getElementById('audio');
+                audio.src = 'data:audio/wav;base64,' + data.audio_base64;
+                audio.style.display = 'block';
+                audio.play();
+            }
+        }
+    </script>
+</body>
+</html>
