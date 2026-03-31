@@ -37,7 +37,7 @@ cp .env.example .env
 
 ```bash
 # 启动Flask应用
-python app.py
+python app_.py
 
 # 或使用gunicorn（生产环境）
 # gunicorn -w 4 -b 0.0.0.0:5000 app:app

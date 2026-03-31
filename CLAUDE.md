@@ -25,7 +25,7 @@ Core dependencies:
 
 ```bash
 source venv/bin/activate
-python app.py
+python app_.py
 ```
 
 The Flask server runs on `http://0.0.0.0:5000`
