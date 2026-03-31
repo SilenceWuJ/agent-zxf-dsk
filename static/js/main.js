@@ -1,6 +1,25 @@
 // AI张老师数字分身 - 主JavaScript文件
 
 class AIDeZhangChat {
+    
+    // 检测移动设备
+    static isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+    
+    // 检测触摸设备
+    static isTouchDevice() {
+        return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    }
+    
+    // 获取屏幕尺寸
+    static getScreenSize() {
+        return {
+            width: window.innerWidth,
+            height: window.innerHeight,
+            isPortrait: window.innerHeight > window.innerWidth
+        };
+    }
     constructor() {
         this.chatHistory = document.getElementById('chatHistory');
         this.questionInput = document.getElementById('questionInput');
@@ -22,6 +41,93 @@ class AIDeZhangChat {
     init() {
         this.setupEventListeners();
         this.loadInitialState();
+        this.optimizeForMobile();
+    }
+    
+    optimizeForMobile() {
+        // 如果是移动设备，进行优化
+        if (AIDeZhangChat.isMobileDevice()) {
+            console.log('移动设备检测，进行优化...');
+            
+            // 添加移动端CSS类
+            document.body.classList.add('mobile-device');
+            
+            // 如果是触摸设备
+            if (AIDeZhangChat.isTouchDevice()) {
+                document.body.classList.add('touch-device');
+                
+                // 优化触摸体验
+                this.optimizeTouchExperience();
+            }
+            
+            // 监听屏幕方向变化
+            this.setupOrientationListener();
+            
+            // 优化虚拟键盘弹出时的布局
+            this.setupKeyboardListener();
+        }
+    }
+    
+    optimizeTouchExperience() {
+        // 增加按钮的触摸目标大小
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn => {
+            if (btn.offsetWidth < 44 || btn.offsetHeight < 44) {
+                btn.style.minWidth = '44px';
+                btn.style.minHeight = '44px';
+            }
+        });
+        
+        // 防止双击缩放
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', (e) => {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                e.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    }
+    
+    setupOrientationListener() {
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                this.adjustLayoutForOrientation();
+            }, 300);
+        });
+    }
+    
+    setupKeyboardListener() {
+        // 监听虚拟键盘弹出/收起
+        const input = this.questionInput;
+        if (input) {
+            input.addEventListener('focus', () => {
+                setTimeout(() => {
+                    this.scrollToBottom();
+                }, 300);
+            });
+            
+            input.addEventListener('blur', () => {
+                setTimeout(() => {
+                    this.scrollToBottom();
+                }, 300);
+            });
+        }
+    }
+    
+    adjustLayoutForOrientation() {
+        const screen = AIDeZhangChat.getScreenSize();
+        const chatHistory = this.chatHistory;
+        
+        if (chatHistory) {
+            if (screen.isPortrait) {
+                // 竖屏模式
+                chatHistory.style.maxHeight = '50vh';
+            } else {
+                // 横屏模式
+                chatHistory.style.maxHeight = '30vh';
+            }
+        }
     }
     
     setupEventListeners() {
@@ -130,35 +236,51 @@ class AIDeZhangChat {
     addUserMessage(text) {
         const messageDiv = document.createElement('div');
         messageDiv.className = 'user-message';
+        messageDiv.setAttribute('role', 'article');
+        messageDiv.setAttribute('aria-label', '你的消息');
+        
+        const time = this.getCurrentTime();
+        const formattedText = this.escapeHtml(text);
+        
         messageDiv.innerHTML = `
             <div class="message-content user">
                 <div class="message-header">
                     <span class="sender-name">你</span>
-                    <span class="message-time">${this.getCurrentTime()}</span>
+                    <span class="message-time" aria-label="发送时间：${time}">${time}</span>
                 </div>
-                <div class="message-text">${this.escapeHtml(text)}</div>
+                <div class="message-text">${formattedText}</div>
             </div>
-            <div class="message-avatar user">
+            <div class="message-avatar user" aria-hidden="true">
                 <i class="fas fa-user"></i>
             </div>
         `;
         
         this.chatHistory.appendChild(messageDiv);
         this.scrollToBottom();
+        
+        // 移动端优化：添加触摸反馈
+        if (AIDeZhangChat.isTouchDevice()) {
+            this.addMessageTouchFeedback(messageDiv);
+        }
     }
     
     addAIMessage(text, audioBase64 = null, audioFormat = 'mp3') {
         const messageDiv = document.createElement('div');
         messageDiv.className = 'ai-message';
+        messageDiv.setAttribute('role', 'article');
+        messageDiv.setAttribute('aria-label', 'AI张老师的回复');
 
+        const time = this.getCurrentTime();
         const audioId = `audio-${Date.now()}`;
 
         // Always create audio button, enable/disable based on availability
         const hasAudio = !!audioBase64;
         let audioButtonHtml = `
-            <button class="btn-audio-play ${hasAudio ? '' : 'disabled'}" id="btn-${audioId}" onclick="${hasAudio ? `window.chatApp.toggleAudio('${audioId}')` : ''}">
+            <button class="btn-audio-play ${hasAudio ? '' : 'disabled'}" id="btn-${audioId}" 
+                    onclick="${hasAudio ? `window.chatApp.toggleAudio('${audioId}')` : ''}"
+                    aria-label="${hasAudio ? '播放语音回复' : '暂无语音回复'}">
                 <i class="fas fa-volume-${hasAudio ? 'up' : 'off'}"></i>
-                <span>${hasAudio ? '播放语音' : '暂无语音'}</span>
+                <span class="btn-text">${hasAudio ? '播放语音' : '暂无语音'}</span>
             </button>
         `;
 
@@ -170,13 +292,13 @@ class AIDeZhangChat {
         }
 
         messageDiv.innerHTML = `
-            <div class="message-avatar">
+            <div class="message-avatar" aria-hidden="true">
                 <i class="fas fa-user-tie"></i>
             </div>
             <div class="message-content">
                 <div class="message-header">
                     <span class="sender-name">AI张老师</span>
-                    <span class="message-time">${this.getCurrentTime()}</span>
+                    <span class="message-time" aria-label="回复时间：${time}">${time}</span>
                 </div>
                 <div class="message-text">${this.formatAnswer(text)}</div>
                 <div class="message-actions">${audioButtonHtml}</div>
@@ -197,13 +319,42 @@ class AIDeZhangChat {
                 console.warn('自动播放失败:', e);
             });
         }
+        
+        // 移动端优化：添加触摸反馈
+        if (AIDeZhangChat.isTouchDevice()) {
+            this.addMessageTouchFeedback(messageDiv);
+        }
+    }
+    
+    addMessageTouchFeedback(messageDiv) {
+        // 为消息添加触摸反馈
+        let touchStartY = 0;
+        let touchStartX = 0;
+        
+        messageDiv.addEventListener('touchstart', (e) => {
+            touchStartY = e.touches[0].clientY;
+            touchStartX = e.touches[0].clientX;
+            messageDiv.style.transition = 'transform 0.1s ease';
+            messageDiv.style.transform = 'scale(0.98)';
+        }, { passive: true });
+        
+        messageDiv.addEventListener('touchend', () => {
+            messageDiv.style.transform = 'scale(1)';
+        }, { passive: true });
+        
+        messageDiv.addEventListener('touchcancel', () => {
+            messageDiv.style.transform = 'scale(1)';
+        }, { passive: true });
     }
     
     addErrorMessage(text) {
         const messageDiv = document.createElement('div');
         messageDiv.className = 'error-message';
+        messageDiv.setAttribute('role', 'alert');
+        messageDiv.setAttribute('aria-label', '错误提示');
+        
         messageDiv.innerHTML = `
-            <div class="message-avatar error">
+            <div class="message-avatar error" aria-hidden="true">
                 <i class="fas fa-exclamation-triangle"></i>
             </div>
             <div class="message-content error">

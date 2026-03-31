@@ -521,6 +521,7 @@ input:checked + .slider:before {
 }
 
 /* 响应式设计 */
+/* 平板设备 (768px - 1024px) */
 @media (max-width: 1024px) {
     .main-content {
         grid-template-columns: 1fr;
@@ -529,93 +530,431 @@ input:checked + .slider:before {
     
     .sidebar {
         order: -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .sidebar-card {
+        margin-bottom: 0;
     }
 }
 
+/* 大屏手机 (480px - 768px) */
 @media (max-width: 768px) {
     .container {
-        padding: 10px;
+        padding: 8px;
+    }
+    
+    .app-wrapper {
+        border-radius: 16px;
+        min-height: 95vh;
     }
     
     .app-header {
-        padding: 20px;
+        padding: 16px 20px;
     }
     
     .header-content {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
         text-align: center;
     }
     
     .logo-section {
         flex-direction: column;
         text-align: center;
+        gap: 12px;
+    }
+    
+    .logo-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
     }
     
     .logo-text h1 {
-        font-size: 1.8rem;
-    }
-    
-    .main-content {
-        padding: 20px;
-    }
-    
-    .chat-history {
-        padding: 15px;
-        max-height: 400px;
-    }
-    
-    .input-area {
-        padding: 15px;
-    }
-    
-    textarea {
-        padding: 15px 100px 15px 15px;
-    }
-    
-    .btn-send {
-        padding: 10px 20px;
-    }
-    
-    .sidebar-card {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        line-height: 1.3;
     }
     
     .subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     
     .header-tagline .tagline {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        display: inline-block;
+        max-width: 100%;
+        white-space: normal;
+        line-height: 1.4;
+    }
+    
+    .main-content {
+        padding: 16px;
+        gap: 16px;
+    }
+    
+    .chat-history {
+        padding: 12px;
+        max-height: 50vh;
+        min-height: 200px;
+    }
+    
+    .input-area {
+        padding: 12px;
+    }
+    
+    .input-container {
+        margin-bottom: 8px;
+    }
+    
+    textarea {
+        padding: 12px 90px 12px 12px;
+        font-size: 0.95rem;
+        min-height: 60px;
+        max-height: 120px;
+    }
+    
+    .input-actions {
+        right: 8px;
+        bottom: 8px;
+        gap: 8px;
+    }
+    
+    .btn-send {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        min-width: 60px;
+    }
+    
+    .btn-voice {
+        width: 44px;
+        height: 44px;
         font-size: 1rem;
-        padding: 8px 15px;
+    }
+    
+    .input-hint {
+        font-size: 0.8rem;
+    }
+    
+    .sidebar {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .sidebar-card {
+        padding: 16px;
+    }
+    
+    .sidebar-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .style-list li, .knowledge-list li {
+        padding: 8px 0;
+        font-size: 0.9rem;
     }
     
     .message-avatar {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
     }
     
     .message-content {
-        padding: 15px;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .sender-name {
+        font-size: 1rem;
+    }
+    
+    .message-time {
+        font-size: 0.8rem;
+    }
+    
+    .loading-spinner {
+        font-size: 3rem;
+    }
+    
+    .loading-content p {
+        font-size: 1.1rem;
+    }
+    
+    .loading-subtext {
+        font-size: 0.9rem;
+    }
+}
+
+/* 小屏手机 (< 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 6px;
+    }
+    
+    .app-wrapper {
+        border-radius: 12px;
+    }
+    
+    .app-header {
+        padding: 12px 16px;
+    }
+    
+    .logo-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.4rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .header-tagline .tagline {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+    
+    .main-content {
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .chat-history {
+        padding: 10px;
+        max-height: 45vh;
+    }
+    
+    .input-area {
+        padding: 10px;
+    }
+    
+    textarea {
+        padding: 10px 80px 10px 10px;
+        font-size: 0.9rem;
+        min-height: 55px;
+    }
+    
+    .btn-send {
+        padding: 8px 12px;
+        min-width: 50px;
     }
     
     .btn-send span {
         display: none;
     }
     
-    .btn-send {
-        padding: 12px;
+    .btn-send i {
+        font-size: 1rem;
     }
     
-    .btn-send i {
-        margin: 0;
+    .btn-voice {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .sidebar-card {
+        padding: 14px;
+    }
+    
+    .sidebar-card h3 {
+        font-size: 1rem;
+    }
+    
+    .message-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+    
+    .message-content {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+    
+    .sender-name {
+        font-size: 0.95rem;
+    }
+    
+    /* 优化移动端触摸体验 */
+    .btn-send, .btn-voice {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+    
+    textarea {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    
+    /* 防止iOS缩放 */
+    input, textarea, select {
+        font-size: 16px !important;
+    }
+    
+    /* 优化滚动 */
+    .chat-history {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+    }
+}
+
+/* 移动设备特定样式 */
+body.mobile-device {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body.touch-device .btn-send,
+body.touch-device .btn-voice {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+body.touch-device .chat-history {
+    scroll-behavior: smooth;
+}
+
+/* 防止移动端长按菜单 */
+textarea, input, button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+textarea, input {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+/* 优化移动端滚动 */
+.chat-history {
+    scrollbar-width: thin;
+}
+
+/* 超小屏手机 (< 360px) */
+@media (max-width: 360px) {
+    .logo-text h1 {
+        font-size: 1.2rem;
+    }
+    
+    .subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .logo-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.6rem;
+    }
+    
+    textarea {
+        padding: 8px 70px 8px 8px;
+        font-size: 0.85rem;
+    }
+    
+    .btn-send {
+        padding: 6px 10px;
+        min-width: 45px;
+    }
+    
+    .btn-voice {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .message-avatar {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .sidebar-card {
+        padding: 12px;
+    }
+}
+
+/* 横屏模式优化 */
+@media (max-height: 500px) and (orientation: landscape) {
+    .app-header {
+        padding: 10px 16px;
+    }
+    
+    .logo-section {
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.2rem;
+    }
+    
+    .subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .chat-history {
+        max-height: 30vh;
+    }
+    
+    .main-content {
+        grid-template-columns: 2fr 1fr;
+        gap: 12px;
+    }
+    
+    .sidebar {
+        order: 0;
+    }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+    
+    .app-wrapper {
+        background: #2d3748;
+        color: #e2e8f0;
+    }
+    
+    .chat-history {
+        background: #2d3748;
+    }
+    
+    .message-content {
+        background: #4a5568;
+        color: #e2e8f0;
+    }
+    
+    .user-message .message-content {
+        background: #2c5282;
+    }
+    
+    textarea {
+        background: #4a5568;
+        color: #e2e8f0;
+        border-color: #718096;
+    }
+    
+    .sidebar-card {
+        background: #4a5568;
+        border-color: #718096;
     }
 }
 

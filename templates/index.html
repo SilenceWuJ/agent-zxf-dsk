@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="header-tagline">
-                <span class="tagline">专业和报考</span>
+                <span class="tagline" aria-label="AI张老师专业领域">专业和报考</span>
             </div>
         </div>
     </header>
@@ -59,13 +59,15 @@
                             id="questionInput" 
                             placeholder="输入你的问题，比如：'计算机专业前景怎么样？' 或 '普通家庭学什么专业好？'..."
                             rows="3"
+                            aria-label="输入问题"
+                            enterkeyhint="send"
                         ></textarea>
                         <div class="input-actions">
-                            <button class="btn-send" id="sendButton">
+                            <button class="btn-send" id="sendButton" aria-label="发送消息">
                                 <i class="fas fa-paper-plane"></i>
-                                <span>发送</span>
+                                <span class="btn-text">发送</span>
                             </button>
-                            <button class="btn-voice" id="voiceButton">
+                            <button class="btn-voice" id="voiceButton" aria-label="语音输入">
                                 <i class="fas fa-microphone"></i>
                             </button>
                         </div>

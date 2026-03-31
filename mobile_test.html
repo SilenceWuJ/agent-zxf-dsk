@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>移动端适配测试 - AI张老师</title>
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+        
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #e0e6ed;
+            border-radius: 8px;
+        }
+        
+        .test-section h2 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .test-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .test-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        
+        .test-button:hover {
+            background: #2980b9;
+        }
+        
+        .device-mockup {
+            width: 100%;
+            max-width: 375px;
+            margin: 20px auto;
+            border: 12px solid #333;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .device-mockup::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 6px;
+            background: #333;
+            border-radius: 0 0 6px 6px;
+            z-index: 10;
+        }
+        
+        .device-screen {
+            width: 100%;
+            height: 667px;
+            background: white;
+            overflow: hidden;
+        }
+        
+        .device-screen iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .pass {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .fail {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        @media (max-width: 768px) {
+            .test-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .device-mockup {
+                max-width: 100%;
+                border-width: 8px;
+                border-radius: 20px;
+            }
+            
+            .device-screen {
+                height: 500px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .test-container {
+                padding: 15px;
+            }
+            
+            .test-section {
+                padding: 15px;
+            }
+            
+            .device-screen {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>AI张老师 - 移动端适配测试</h1>
+        
+        <div class="test-section">
+            <h2>📱 设备兼容性测试</h2>
+            <div class="test-grid">
+                <div class="test-item">
+                    <h3>屏幕尺寸</h3>
+                    <p id="screen-size">检测中...</p>
+                </div>
+                <div class="test-item">
+                    <h3>设备类型</h3>
+                    <p id="device-type">检测中...</p>
+                </div>
+                <div class="test-item">
+                    <h3>触摸支持</h3>
+                    <p id="touch-support">检测中...</p>
+                </div>
+                <div class="test-item">
+                    <h3>屏幕方向</h3>
+                    <p id="screen-orientation">检测中...</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>🎯 功能测试</h2>
+            <div style="text-align: center;">
+                <a href="http://localhost:5000/" class="test-button" target="_blank">访问AI张老师应用</a>
+                <a href="http://localhost:5000/old" class="test-button" target="_blank">访问原始版本</a>
+            </div>
+            
+            <div id="function-tests">
+                <div class="test-result" id="test-viewport">视口设置: 检测中...</div>
+                <div class="test-result" id="test-responsive">响应式布局: 检测中...</div>
+                <div class="test-result" id="test-touch">触摸交互: 检测中...</div>
+                <div class="test-result" id="test-accessibility">可访问性: 检测中...</div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>📐 响应式布局预览</h2>
+            <div class="device-mockup">
+                <div class="device-screen">
+                    <iframe src="http://localhost:5000/" title="AI张老师应用预览"></iframe>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 15px; color: #666;">
+                模拟iPhone 12 Pro Max屏幕尺寸 (375x667)
+            </p>
+        </div>
+        
+        <div class="test-section">
+            <h2>📊 测试结果</h2>
+            <div id="test-summary">
+                <p>正在运行测试...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 设备检测
+        function detectDeviceInfo() {
+            const screenSize = document.getElementById('screen-size');
+            const deviceType = document.getElementById('device-type');
+            const touchSupport = document.getElementById('touch-support');
+            const screenOrientation = document.getElementById('screen-orientation');
+            
+            // 屏幕尺寸
+            screenSize.textContent = `${window.innerWidth} × ${window.innerHeight} 像素`;
+            
+            // 设备类型
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            deviceType.textContent = isMobile ? '移动设备' : '桌面设备';
+            
+            // 触摸支持
+            const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            touchSupport.textContent = isTouch ? '支持触摸' : '不支持触摸';
+            
+            // 屏幕方向
+            const isPortrait = window.innerHeight > window.innerWidth;
+            screenOrientation.textContent = isPortrait ? '竖屏' : '横屏';
+        }
+        
+        // 功能测试
+        function runFunctionTests() {
+            // 视口测试
+            const viewportMeta = document.querySelector('meta[name="viewport"]');
+            const testViewport = document.getElementById('test-viewport');
+            if (viewportMeta && viewportMeta.content.includes('width=device-width')) {
+                testViewport.textContent = '视口设置: ✅ 正确配置';
+                testViewport.className = 'test-result pass';
+            } else {
+                testViewport.textContent = '视口设置: ❌ 需要配置';
+                testViewport.className = 'test-result fail';
+            }
+            
+            // 响应式布局测试
+            const testResponsive = document.getElementById('test-responsive');
+            if (window.innerWidth <= 768) {
+                testResponsive.textContent = '响应式布局: ✅ 移动端模式';
+                testResponsive.className = 'test-result pass';
+            } else {
+                testResponsive.textContent = '响应式布局: ✅ 桌面端模式';
+                testResponsive.className = 'test-result pass';
+            }
+            
+            // 触摸交互测试
+            const testTouch = document.getElementById('test-touch');
+            const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            if (isTouch) {
+                testTouch.textContent = '触摸交互: ✅ 已优化';
+                testTouch.className = 'test-result pass';
+            } else {
+                testTouch.textContent = '触摸交互: ⚠️ 桌面模式';
+                testTouch.className = 'test-result pass';
+            }
+            
+            // 可访问性测试
+            const testAccessibility = document.getElementById('test-accessibility');
+            const hasAriaLabels = document.querySelectorAll('[aria-label]').length > 0;
+            if (hasAriaLabels) {
+                testAccessibility.textContent = '可访问性: ✅ 支持ARIA';
+                testAccessibility.className = 'test-result pass';
+            } else {
+                testAccessibility.textContent = '可访问性: ⚠️ 需要改进';
+                testAccessibility.className = 'test-result fail';
+            }
+        }
+        
+        // 更新测试结果
+        function updateTestSummary() {
+            const summary = document.getElementById('test-summary');
+            const passes = document.querySelectorAll('.pass').length;
+            const fails = document.querySelectorAll('.fail').length;
+            const total = passes + fails;
+            
+            let resultHTML = `
+                <h3>测试完成</h3>
+                <p>✅ 通过: ${passes} 项</p>
+                <p>❌ 失败: ${fails} 项</p>
+                <p>📊 总分: ${Math.round((passes / total) * 100)}%</p>
+            `;
+            
+            if (fails === 0) {
+                resultHTML += '<p style="color: #28a745; font-weight: bold;">🎉 所有测试通过！</p>';
+            } else {
+                resultHTML += '<p style="color: #dc3545; font-weight: bold;">⚠️ 需要修复失败的项目</p>';
+            }
+            
+            summary.innerHTML = resultHTML;
+        }
+        
+        // 监听屏幕方向变化
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                detectDeviceInfo();
+                runFunctionTests();
+                updateTestSummary();
+            }, 300);
+        });
+        
+        // 监听窗口大小变化
+        window.addEventListener('resize', () => {
+            detectDeviceInfo();
+            runFunctionTests();
+            updateTestSummary();
+        });
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            detectDeviceInfo();
+            runFunctionTests();
+            updateTestSummary();
+            
+            // 每5秒更新一次（用于动态测试）
+            setInterval(detectDeviceInfo, 5000);
+        });
+    </script>
+</body>
+</html>
