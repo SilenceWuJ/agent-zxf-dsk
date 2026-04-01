@@ -18,7 +18,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from flask import Flask, request, jsonify, render_template
 from dotenv import load_dotenv
 
-from services.rag_service_improved import search_knowledge
+from services.rag_service import search_knowledge
 from services.llm_service_improved import ask_llm
 from services.tts_service import text_to_speech
 from services.session_service import get_session, save_session
@@ -85,11 +85,11 @@ def optimized_search_knowledge(question: str) -> str:
     """优化的知识库搜索函数"""
     cache_key = f"rag:{question[:50]}"
     
-    # 尝试从缓存获取
-    cached_result = get_cache(cache_key)
-    if cached_result:
-        logger.info(f"RAG缓存命中: {question[:30]}...")
-        return cached_result
+    # # 尝试从缓存获取
+    # cached_result = get_cache(cache_key)
+    # if cached_result:
+    #     logger.info(f"RAG缓存命中: {question[:30]}...")
+    #     return cached_result
     
     # 执行搜索
     monitor.start_timer("rag_search")
@@ -99,7 +99,7 @@ def optimized_search_knowledge(question: str) -> str:
         
         # 缓存结果
         if result:
-            set_cache(cache_key, result, expire=300)  # 缓存5分钟
+            set_cache(cache_key, result, expire=30)  # 缓存5分钟
         
         return result
     except Exception as e:
