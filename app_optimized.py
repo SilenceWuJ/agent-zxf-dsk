@@ -18,12 +18,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from flask import Flask, request, jsonify, render_template
 from dotenv import load_dotenv
 
-from services.rag_service_improved import search_knowledge
-from services.llm_service_improved import ask_llm
+from services.rag_service import search_knowledge
+from services.llm_service import ask_llm
 from services.tts_service import text_to_speech
 from services.session_service import get_session, save_session
 from services.filter_service import is_related_question
-from utils.cache_improved import get_cache, set_cache
+from utils.cache import get_cache, set_cache
 from utils.performance import monitor, optimizer, time_it
 from utils.logger import logger
 
@@ -99,7 +99,7 @@ def optimized_search_knowledge(question: str) -> str:
         
         # 缓存结果
         if result:
-            set_cache(cache_key, result, expire=300)  # 缓存5分钟
+            set_cache(cache_key, result, ttl=300)  # 缓存5分钟
         
         return result
     except Exception as e:
@@ -134,7 +134,7 @@ def optimized_ask_llm(question: str, context: str, history: list) -> str:
         
         # 缓存结果
         if result:
-            set_cache(cache_key, result, expire=600)  # 缓存10分钟
+            set_cache(cache_key, result, ttl=600)  # 缓存10分钟
         
         return result
     except Exception as e:
@@ -165,7 +165,7 @@ def optimized_text_to_speech(text: str) -> bytes:
         
         # 缓存结果
         if result:
-            set_cache(cache_key, result, expire=1800)  # 缓存30分钟
+            set_cache(cache_key, result, ttl=1800)  # 缓存30分钟
         
         return result
     except Exception as e:
@@ -290,7 +290,7 @@ def chat():
             response_data["warnings"] = api_results["errors"]
         
         # 缓存响应
-        set_cache(cache_key, response_data, expire=300)
+        set_cache(cache_key, response_data, ttl=300)
         
         # 记录性能指标
         total_time = time.time() - start_time

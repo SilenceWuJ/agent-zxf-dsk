@@ -3,16 +3,25 @@
 import os
 import requests
 import base64
+import time
+import uuid
 from flask import Flask, request, jsonify, send_file, render_template
 from dotenv import load_dotenv
-# from tencentcloud.common import credential
-# from tencentcloud.trtc.v20190722 import trtc_client, models
-import io
-import wave
+from services.rag_service import search_knowledge
+from services.llm_service import ask_llm
+from utils.logger import get_logger
 import dashscope
 from dashscope.audio.tts_v2 import SpeechSynthesizer, ResultCallback
+from services.tts_service import text_to_speech
+from services.session_service import get_session, save_session
+
+from utils.cache import get_cache, set_cache
+from utils.performance import monitor, optimizer, time_it
+
 # 加载环境变量
 load_dotenv()
+logger = get_logger()
+
 
 app = Flask(__name__)
 
@@ -96,6 +105,7 @@ SYSTEM_PROMPT = """
 - 适当使用东北口音词汇（如"整"、"老好了"）
 - 语气坚定，结论明确
 - 喜欢用具体例子说明问题
+- 不要使用动作描述（如拍桌子、扶眼镜等），只使用语言表达
 
 回答规则：
 1. 只回答与以下主题相关的问题：
@@ -114,61 +124,61 @@ SYSTEM_PROMPT = """
 """
 
 
-def is_related_question(question):
-    """判断问题是否与专业/考研/就业相关"""
-    # 相关关键词列表
-    related_keywords = [
-        # 高考相关
-        '高考', '志愿', '填报', '分数线', '录取', '大学', '院校', '本科', '专科',
-        '一本', '二本', '三本', '985', '211', '双一流', '分数线', '录取线',
-        
-        # 考研相关
-        '考研', '研究生', '硕士', '博士', '保研', '推免', '复试', '初试',
-        '专业课', '公共课', '导师', '研究方向', '学术', '论文',
-        
-        # 专业相关
-        '专业', '学科', '课程', '计算机', '软件', '工程', '医学', '法律',
-        '金融', '经济', '管理', '教育', '艺术', '设计', '建筑', '机械',
-        '电子', '电气', '自动化', '化学', '物理', '数学', '生物', '环境',
-        
-        # 就业相关
-        '就业', '工作', '职业', '薪资', '工资', '待遇', '前景', '发展',
-        '行业', '企业', '公司', '招聘', '面试', '简历', '技能', '能力',
-        
-        # 学习相关
-        '学习', '方法', '技巧', '效率', '备考', '复习', '考试', '成绩',
-        
-        # 规划相关
-        '规划', '选择', '方向', '未来', '发展', '建议', '咨询', '指导'
-    ]
-    
-    question_lower = question.lower()
-    
-    # 检查是否包含相关关键词
-    for keyword in related_keywords:
-        if keyword in question_lower:
-            return True
-    
-    # 检查常见问题模式
-    patterns = [
-        r'.*怎么选.*专业.*',
-        r'.*什么专业.*好.*',
-        r'.*哪个.*大学.*好.*',
-        r'.*就业.*怎么样.*',
-        r'.*薪资.*多少.*',
-        r'.*前景.*如何.*',
-        r'.*适合.*学.*什么.*',
-        r'.*推荐.*专业.*',
-        r'.*比较.*专业.*',
-        r'.*分析.*专业.*'
-    ]
-    
-    import re
-    for pattern in patterns:
-        if re.match(pattern, question_lower):
-            return True
-    
-    return False
+# def is_related_question(question):
+#     """判断问题是否与专业/考研/就业相关"""
+#     # 相关关键词列表
+#     related_keywords = [
+#         # 高考相关
+#         '高考', '志愿', '填报', '分数线', '录取', '大学', '院校', '本科', '专科',
+#         '一本', '二本', '三本', '985', '211', '双一流', '分数线', '录取线','报考'
+#
+#         # 考研相关
+#         '考研', '研究生', '硕士', '博士', '保研', '推免', '复试', '初试',
+#         '专业课', '公共课', '导师', '研究方向', '学术', '论文',
+#
+#         # 专业相关
+#         '专业', '学科', '课程', '计算机', '软件', '工程', '医学', '法律',
+#         '金融', '经济', '管理', '教育', '艺术', '设计', '建筑', '机械',
+#         '电子', '电气', '自动化', '化学', '物理', '数学', '生物', '环境',
+#
+#         # 就业相关
+#         '就业', '工作', '职业', '薪资', '工资', '待遇', '前景', '发展',
+#         '行业', '企业', '公司', '招聘', '面试', '简历', '技能', '能力',
+#
+#         # 学习相关
+#         '学习', '方法', '技巧', '效率', '备考', '复习', '考试', '成绩',
+#
+#         # 规划相关
+#         '规划', '选择', '方向', '未来', '发展', '建议', '咨询', '指导'
+#     ]
+#
+#     question_lower = question.lower()
+#
+#     # 检查是否包含相关关键词
+#     for keyword in related_keywords:
+#         if keyword in question_lower:
+#             return True
+#
+#     # 检查常见问题模式
+#     patterns = [
+#         r'.*怎么选.*专业.*',
+#         r'.*什么专业.*好.*',
+#         r'.*哪个.*大学.*好.*',
+#         r'.*就业.*怎么样.*',
+#         r'.*薪资.*多少.*',
+#         r'.*前景.*如何.*',
+#         r'.*适合.*学.*什么.*',
+#         r'.*推荐.*专业.*',
+#         r'.*比较.*专业.*',
+#         r'.*分析.*专业.*'
+#     ]
+#
+#     import re
+#     for pattern in patterns:
+#         if re.match(pattern, question_lower):
+#             return True
+#
+#     return False
 
 
 def get_rag_response(user_question):
@@ -485,27 +495,52 @@ def text_to_speech(text):
 @app.route("/chat", methods=["POST"])
 def chat():
     """主对话接口：接收文本/音频，返回文本+音频"""
+    start = time.time()
     data = request.get_json()
     user_question = data.get("question", "")
     need_audio = data.get("need_audio", True)  # 是否返回音频，默认返回
+    session_id = data.get("session_id")
+
+    if not session_id:
+        session_id = str(uuid.uuid4())
+
+    cache_key = f"qa:{user_question}"
+
+    cached = get_cache(cache_key)
+    if cached:
+        cached["session_id"] = session_id
+        return jsonify(cached)
 
     if not user_question:
         return jsonify({"error": "请输入问题"}), 400
 
     # 检查问题是否相关
-    if not is_related_question(user_question):
-        print(f"⚠️  非相关问题被过滤: {user_question}")
-        return jsonify({
-            "answer": "这个问题超出了我的专业范围。我是专门帮助大家解决高考志愿、考研选择和职业规划问题的。你有什么关于专业选择或就业方面的问题吗？",
-            "filtered": True
-        })
+    # if not is_related_question(user_question):
+    #     print(f"⚠️  非相关问题被过滤: {user_question}")
+    #     return jsonify({
+    #         "answer": "这个问题超出了我的专业范围。我是专门帮助大家解决高考志愿、考研选择和职业规划问题的。你有什么关于专业选择或就业方面的问题吗？",
+    #         "filtered": True
+    #     })
 
     try:
         # 1. 从阿里云知识库检索相关上下文
-        context = get_rag_response(user_question)
+        # context = get_rag_response(user_question)
         
         # 2. 调用大模型生成回答
-        answer = call_deepseek_with_context(user_question, context)
+        # answer = call_deepseek_with_context(user_question, context)
+
+        history = get_session(session_id)
+
+        context = search_knowledge(user_question)
+
+        answer = ask_llm(user_question, context, history)
+
+        history.append({"role": "user", "content": user_question})
+
+        history.append({"role": "assistant", "content": answer})
+
+        save_session(session_id, history)
+
 
         # 3. 语音合成
         audio_base64 = None
@@ -525,28 +560,26 @@ def chat():
 
         # 返回结果
         response_data = {
-            "answer": answer
+            "answer": answer,
+            "audio": audio_bytes,
+            "session_id": session_id
         }
+
+        set_cache(cache_key, response_data)
         if audio_base64:
             response_data["audio_base64"] = audio_base64
             response_data["audio_format"] = TTS_FORMAT
 
         print(f"返回数据: answer长度={len(answer)}, audio={'有' if audio_base64 else '无'}")
+
+        set_cache(cache_key, response_data)
+
+        logger.info(f"question={user_question}")
+
+        logger.info(f"time={time.time() - start}")
+
         return jsonify(response_data)
 
-        # # 3. 语音合成（可选）
-        # audio_base64 = None
-        # if TENCENT_SECRET_ID and TENCENT_SECRET_KEY:
-        #     try:
-        #         audio_bytes = text_to_speech(answer)
-        #         audio_base64 = base64.b64encode(audio_bytes).decode("utf-8")
-        #     except Exception as e:
-        #         print(f"语音合成失败: {e}")
-
-        # return jsonify({
-        #     "answer": answer,
-        #     # "audio_base64": audio_base64
-        # })
         
     except ValueError as e:
         # API密钥缺失错误

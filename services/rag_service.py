@@ -53,3 +53,10 @@ def search_knowledge(question):
         print("RAG ERROR:", e)
 
         return ""
+
+# def search_knowledge(question):
+#
+#     with open("knowledge/majors.txt") as f:
+#         data = f.read()
+#
+#     return data[:1000]

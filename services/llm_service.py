@@ -18,41 +18,78 @@ SYSTEM_PROMPT = """
 """
 
 
-def ask_llm(question, context):
+# def ask_llm(question, context):
+#
+#     prompt = f"""
+# 参考资料：
+#
+# {context}
+#
+# 问题：
+#
+# {question}
+#
+# 请用张雪峰风格回答
+# """
+#
+#     payload = {
+#         "model": "deepseek-chat",
+#         "messages": [
+#             {"role":"system","content":SYSTEM_PROMPT},
+#             {"role":"user","content":prompt}
+#         ],
+#         "temperature":0.7
+#     }
+#
+#     headers = {
+#         "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
+#         "Content-Type": "application/json"
+#     }
+#
+#     r = requests.post(
+#         DEEPSEEK_URL,
+#         headers=headers,
+#         json=payload,
+#         timeout=30
+#     )
+#
+#     r.raise_for_status()
+#
+#     return r.json()["choices"][0]["message"]["content"]
 
-    prompt = f"""
-参考资料：
 
+def ask_llm(question, context, history):
+
+    messages = []
+
+    for item in history:
+        messages.append(item)
+
+    messages.append({
+        "role": "user",
+        "content": f"""
+知识库信息:
 {context}
 
-问题：
-
+用户问题:
 {question}
 
 请用张雪峰风格回答
 """
+    })
 
-    payload = {
-        "model": "deepseek-chat",
-        "messages": [
-            {"role":"system","content":SYSTEM_PROMPT},
-            {"role":"user","content":prompt}
-        ],
-        "temperature":0.7
-    }
-
-    headers = {
-        "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
-        "Content-Type": "application/json"
-    }
-
-    r = requests.post(
-        DEEPSEEK_URL,
-        headers=headers,
-        json=payload,
-        timeout=30
+    response = requests.post(
+        "https://api.deepseek.com/v1/chat/completions",
+        headers={
+            "Authorization": f"Bearer {DEEPSEEK_API_KEY}"
+        },
+        json={
+            "model": "deepseek-chat",
+            "messages": messages,
+            "temperature": 0.7
+        }
     )
 
-    r.raise_for_status()
+    result = response.json()
 
-    return r.json()["choices"][0]["message"]["content"]
+    return result["choices"][0]["message"]["content"]
