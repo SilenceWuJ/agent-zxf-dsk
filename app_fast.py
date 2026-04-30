@@ -18,7 +18,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed, TimeoutError as
 from flask import Flask, request, jsonify, render_template
 from dotenv import load_dotenv
 
-from services.rag_service_fast import search_knowledge, quick_search
+from services.rag_service_with_toolcalls import search_knowledge, quick_search, get_rag_info
 from services.llm_service_fast import ask_llm, quick_ask
 from services.session_service import get_session, save_session
 from utils.cache_improved import get_cache, set_cache, clear_cache
@@ -252,6 +252,9 @@ def chat():
 @app.route("/health", methods=["GET"])
 def health_check():
     """健康检查接口"""
+    # 获取RAG服务信息
+    rag_info = get_rag_info()
+    
     health_status = {
         "status": "healthy",
         "timestamp": time.time(),
@@ -262,8 +265,21 @@ def health_check():
             "llm_timeout": LLM_TIMEOUT,
             "cache_ttl": CACHE_TTL
         },
+        "services": {
+            "rag": rag_info,
+            "deepseek": bool(os.getenv("DEEPSEEK_API_KEY")),
+            "cache": True
+        },
         "performance": monitor.get_summary()
     }
+    
+    # 检查知识库状态
+    kb_status = rag_info.get("knowledge_base_status", {})
+    if not kb_status.get("has_files", False):
+        health_status["status"] = "degraded"
+        health_status["message"] = "知识库为空，使用降级模式"
+        health_status["suggestion"] = "请上传文件到知识库或使用其他知识库ID"
+    
     return jsonify(health_status)
 
 

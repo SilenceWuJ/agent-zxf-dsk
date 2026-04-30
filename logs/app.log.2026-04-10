@@ -1,0 +1,139 @@
+2026-04-10 14:58:19 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 14:58:19 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 14:58:23 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 14:58:23 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 14:59:12 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 14:59:12 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 14:59:18 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 14:59:18 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 14:59:55 - agent-zxf-dsk - INFO - 开始处理问题: 考验2026...
+2026-04-10 14:59:56 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 1.187秒
+2026-04-10 14:59:56 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 考验2026...
+2026-04-10 15:00:05 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 9.31s, 回答长度 508
+2026-04-10 15:00:05 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 9.313秒
+2026-04-10 15:00:05 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 9.313秒
+2026-04-10 15:00:05 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 9.314秒
+2026-04-10 15:00:05 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 9.314秒
+2026-04-10 15:00:06 - agent-zxf-dsk - INFO - 函数 optimized_text_to_speech 执行时间: 0.390秒
+2026-04-10 15:00:06 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=6, 总时间=10.90s
+2026-04-10 15:00:06 - agent-zxf-dsk - WARNING - 请求处理时间过长: 10.90s
+2026-04-10 15:03:20 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 15:03:20 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 15:03:27 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 15:03:27 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 15:04:20 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 15:04:20 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 15:10:18 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 15:10:18 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 15:11:19 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 15:11:19 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 15:12:13 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 15:12:13 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 15:12:33 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 15:12:33 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 15:16:45 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 15:16:45 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 15:24:35 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 15:24:35 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 15:27:07 - agent-zxf-dsk - INFO - 开始处理问题: 2026美以战争局势，未来5-10年全球局势...
+2026-04-10 15:27:08 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 1.279秒
+2026-04-10 15:27:08 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 2026美以战争局势，未来5-10年全球局势...
+2026-04-10 15:27:20 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 11.73s, 回答长度 612
+2026-04-10 15:27:20 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 11.735秒
+2026-04-10 15:27:20 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 11.735秒
+2026-04-10 15:27:20 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 11.736秒
+2026-04-10 15:27:20 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 11.736秒
+2026-04-10 15:27:21 - agent-zxf-dsk - INFO - 函数 optimized_text_to_speech 执行时间: 0.593秒
+2026-04-10 15:27:21 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=22, 总时间=13.61s
+2026-04-10 15:27:21 - agent-zxf-dsk - WARNING - 请求处理时间过长: 13.61s
+2026-04-10 19:10:30 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 19:10:30 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 19:11:06 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 19:11:06 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 21:19:18 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 21:19:18 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 21:19:24 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 21:19:24 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 21:20:05 - agent-zxf-dsk - INFO - 开始处理问题: 基于当前AI发展下未来5-10年的经济...
+2026-04-10 21:20:06 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 1.381秒
+2026-04-10 21:20:06 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 基于当前AI发展下未来5-10年的经济...
+2026-04-10 21:20:14 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 8.11s, 回答长度 431
+2026-04-10 21:20:14 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 8.114秒
+2026-04-10 21:20:14 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 8.114秒
+2026-04-10 21:20:14 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 8.116秒
+2026-04-10 21:20:14 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 8.116秒
+2026-04-10 21:20:14 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=19, 总时间=9.50s
+2026-04-10 21:23:02 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 21:23:02 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 21:23:05 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 21:23:05 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 21:23:10 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 21:23:10 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 21:23:21 - agent-zxf-dsk - INFO - 完整响应缓存命中: 基于当前AI发展下未来5-10年的经济...
+2026-04-10 21:53:05 - agent-zxf-dsk - INFO - 开始处理问题: 2026美伊战争...
+2026-04-10 21:53:07 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 1.227秒
+2026-04-10 21:53:07 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 2026美伊战争...
+2026-04-10 21:53:14 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 7.52s, 回答长度 357
+2026-04-10 21:53:14 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 7.523秒
+2026-04-10 21:53:14 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 7.523秒
+2026-04-10 21:53:14 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 7.525秒
+2026-04-10 21:53:14 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 7.525秒
+2026-04-10 21:53:14 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=8, 总时间=8.76s
+2026-04-10 21:53:23 - agent-zxf-dsk - INFO - 完整响应缓存命中: 2026美伊战争...
+2026-04-10 21:55:19 - agent-zxf-dsk - INFO - 教育版应用ID调用请求: 测试问题...
+2026-04-10 21:55:19 - agent-zxf-dsk - INFO - 调用阿里云应用ID: fb610534bd5b4951ba9b1dc0bee1713b, 提示词: 知识库ID: jnulz2d020
+
+# 毛泽东智能体对话提示词模板
+## 基于TENSEI系统架构...
+2026-04-10 21:55:50 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 31.11秒，状态码: 200
+2026-04-10 21:55:50 - agent-zxf-dsk - INFO - 教育版应用ID调用完成，耗时: 31.11秒
+2026-04-10 21:56:32 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 21:56:32 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 21:56:54 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 21:56:54 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 21:57:24 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 21:57:25 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 21:58:02 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 21:58:02 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 21:58:38 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 21:58:38 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 21:58:44 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 21:58:44 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-10 21:59:06 - agent-zxf-dsk - INFO - 教育版应用ID调用请求: 2026美伊战争...
+2026-04-10 21:59:06 - agent-zxf-dsk - INFO - 调用阿里云应用ID: fb610534bd5b4951ba9b1dc0bee1713b, 提示词: 知识库ID: jnulz2d020
+
+# 毛泽东智能体对话提示词模板
+## 基于TENSEI系统架构...
+2026-04-10 21:59:26 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 19.59秒，状态码: 200
+2026-04-10 21:59:26 - agent-zxf-dsk - INFO - 教育版应用ID调用完成，耗时: 19.60秒
+2026-04-10 22:01:31 - agent-zxf-dsk - INFO - 教育版应用ID调用请求: 2026美伊战争后看5-10年国际形势...
+2026-04-10 22:01:31 - agent-zxf-dsk - INFO - 调用阿里云应用ID: fb610534bd5b4951ba9b1dc0bee1713b, 提示词: 对话历史：用户：
+用户：
+
+知识库ID: jnulz2d020
+
+# 毛泽东智能体对话提示词模板
+#...
+2026-04-10 22:01:59 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 27.96秒，状态码: 200
+2026-04-10 22:01:59 - agent-zxf-dsk - INFO - 教育版应用ID调用完成，耗时: 27.97秒
+2026-04-10 22:02:52 - agent-zxf-dsk - INFO - 开始处理问题: 计算机专业就业前景...
+2026-04-10 22:02:55 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 2.715秒
+2026-04-10 22:02:55 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 计算机专业就业前景...
+2026-04-10 22:03:13 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 17.57s, 回答长度 388
+2026-04-10 22:03:13 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 17.578秒
+2026-04-10 22:03:13 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 17.578秒
+2026-04-10 22:03:13 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 17.580秒
+2026-04-10 22:03:13 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 17.580秒
+2026-04-10 22:03:13 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=9, 总时间=20.30s
+2026-04-10 22:03:13 - agent-zxf-dsk - WARNING - 请求处理时间过长: 20.30s
+2026-04-10 22:03:33 - agent-zxf-dsk - INFO - 开始处理问题: 计算机专业前景怎么样...
+2026-04-10 22:03:49 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 16.268秒
+2026-04-10 22:03:49 - agent-zxf-dsk - WARNING - 函数 optimized_search_knowledge 执行时间过长: 16.268秒
+2026-04-10 22:03:49 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 计算机专业前景怎么样...
+2026-04-10 22:04:05 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 15.69s, 回答长度 464
+2026-04-10 22:04:05 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 15.690秒
+2026-04-10 22:04:05 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 15.690秒
+2026-04-10 22:04:05 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 15.693秒
+2026-04-10 22:04:05 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 15.693秒
+2026-04-10 22:04:05 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=10, 总时间=31.97s
+2026-04-10 22:04:05 - agent-zxf-dsk - WARNING - 请求处理时间过长: 31.97s

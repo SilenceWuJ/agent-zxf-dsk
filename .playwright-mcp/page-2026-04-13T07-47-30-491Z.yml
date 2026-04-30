@@ -1,0 +1,80 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - heading "AI张老师·数字分身" [level=1] [ref=e4]
+    - paragraph [ref=e5]: 选择最适合你的AI张老师版本，获取专业的高考志愿、考研选择和职业规划建议
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e9]: 
+      - generic [ref=e10]: 基础版本
+      - heading "AI张老师·标准版" [level=2] [ref=e11]
+      - paragraph [ref=e12]: 基于知识库的传统问答模式，提供专业的高考志愿和考研选择建议，适合大多数用户使用。
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]: 
+          - generic [ref=e16]: 基于RAG知识库的专业问答
+        - generic [ref=e17]:
+          - generic [ref=e18]: 
+          - generic [ref=e19]: 张雪峰风格的幽默直率回答
+        - generic [ref=e20]:
+          - generic [ref=e21]: 
+          - generic [ref=e22]: 语音合成功能支持
+        - generic [ref=e23]:
+          - generic [ref=e24]: 
+          - generic [ref=e25]: 会话历史记录
+        - generic [ref=e26]:
+          - generic [ref=e27]: 
+          - generic [ref=e28]: 实时性能优化
+      - button "开始咨询 " [ref=e29] [cursor=pointer]:
+        - text: 开始咨询
+        - generic [ref=e30]: 
+    - generic [ref=e31]:
+      - generic [ref=e33]: 
+      - generic [ref=e34]: 应用版本
+      - heading "AI张老师·应用版" [level=2] [ref=e35]
+      - paragraph [ref=e36]: 集成应用ID的高级版本，提供更智能的上下文理解和个性化建议，适合需要深度咨询的用户。
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: 
+          - generic [ref=e40]: 应用ID驱动的智能对话
+        - generic [ref=e41]:
+          - generic [ref=e42]: 
+          - generic [ref=e43]: 上下文感知的个性化建议
+        - generic [ref=e44]:
+          - generic [ref=e45]: 
+          - generic [ref=e46]: 高级会话管理
+        - generic [ref=e47]:
+          - generic [ref=e48]: 
+          - generic [ref=e49]: 智能缓存机制
+        - generic [ref=e50]:
+          - generic [ref=e51]: 
+          - generic [ref=e52]: 企业级API集成
+      - button "开始咨询 " [ref=e53] [cursor=pointer]:
+        - text: 开始咨询
+        - generic [ref=e54]: 
+    - generic [ref=e55]:
+      - generic [ref=e57]: 
+      - generic [ref=e58]: 教育版本
+      - heading "毛泽东智能体·教育版" [level=2] [ref=e59]
+      - paragraph [ref=e60]: 基于TENSEI系统架构的"有灵魂的穿越者"对话系统，融合毛泽东多维度人格特质，提供深度历史视角对话。
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e63]: 
+          - generic [ref=e64]: TENSEI系统架构驱动
+        - generic [ref=e65]:
+          - generic [ref=e66]: 
+          - generic [ref=e67]: 毛泽东人格特质模拟
+        - generic [ref=e68]:
+          - generic [ref=e69]: 
+          - generic [ref=e70]: 历史穿越者视角对话
+        - generic [ref=e71]:
+          - generic [ref=e72]: 
+          - generic [ref=e73]: 深度矛盾分析方法
+        - generic [ref=e74]:
+          - generic [ref=e75]: 
+          - generic [ref=e76]: "知识库ID: jnulz2d020"
+      - button "开始对话 " [ref=e77] [cursor=pointer]:
+        - text: 开始对话
+        - generic [ref=e78]: 
+  - generic [ref=e79]:
+    - paragraph [ref=e80]: © 2024 AI张老师·数字分身 | 基于张雪峰风格的高考与考研志愿规划专家
+    - paragraph [ref=e81]: 注意：本系统仅为辅助工具，建议结合实际情况和专业咨询做出决策

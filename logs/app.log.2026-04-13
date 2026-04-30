@@ -1,0 +1,170 @@
+2026-04-13 11:04:49 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 11:04:49 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-13 11:04:54 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 11:04:54 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-13 11:05:11 - agent-zxf-dsk - INFO - 开始处理问题: 计算机专业...
+2026-04-13 11:05:11 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 0.886秒
+2026-04-13 11:05:11 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 计算机专业...
+2026-04-13 11:05:28 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 16.16s, 回答长度 659
+2026-04-13 11:05:28 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 16.168秒
+2026-04-13 11:05:28 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 16.168秒
+2026-04-13 11:05:28 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 16.171秒
+2026-04-13 11:05:28 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 16.171秒
+2026-04-13 11:05:28 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=5, 总时间=17.07s
+2026-04-13 11:05:28 - agent-zxf-dsk - WARNING - 请求处理时间过长: 17.07s
+2026-04-13 11:06:23 - agent-zxf-dsk - INFO - 开始处理问题: 基于我的成绩：450分，小县城中原地区，理科，报考学校...
+2026-04-13 11:06:24 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 0.859秒
+2026-04-13 11:06:24 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 基于我的成绩：450分，小县城中原地区，理科，报考学校...
+2026-04-13 11:06:37 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 13.24s, 回答长度 575
+2026-04-13 11:06:37 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 13.241秒
+2026-04-13 11:06:37 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 13.241秒
+2026-04-13 11:06:37 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 13.243秒
+2026-04-13 11:06:37 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 13.243秒
+2026-04-13 11:06:37 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=27, 总时间=14.11s
+2026-04-13 11:06:37 - agent-zxf-dsk - WARNING - 请求处理时间过长: 14.11s
+2026-04-13 11:09:35 - agent-zxf-dsk - INFO - 应用ID调用请求: 你好，你是谁？...
+2026-04-13 11:09:35 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 你好，你是谁？...
+2026-04-13 11:09:52 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 16.89秒，状态码: 200
+2026-04-13 11:09:52 - agent-zxf-dsk - INFO - 应用ID调用完成，耗时: 16.90秒
+2026-04-13 11:12:37 - agent-zxf-dsk - INFO - 应用ID调用请求: 基于成绩推荐专业...
+2026-04-13 11:12:37 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 基于成绩推荐专业...
+2026-04-13 11:13:45 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 67.18秒，状态码: 200
+2026-04-13 11:13:45 - agent-zxf-dsk - INFO - 应用ID调用完成，耗时: 67.18秒
+2026-04-13 11:14:08 - agent-zxf-dsk - INFO - 开始处理问题: 基于成绩推荐专业...
+2026-04-13 11:14:09 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 0.944秒
+2026-04-13 11:14:09 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 基于成绩推荐专业...
+2026-04-13 11:14:24 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 14.64s, 回答长度 505
+2026-04-13 11:14:24 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 14.646秒
+2026-04-13 11:14:24 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 14.646秒
+2026-04-13 11:14:24 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 14.648秒
+2026-04-13 11:14:24 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 14.648秒
+2026-04-13 11:14:24 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=8, 总时间=15.60s
+2026-04-13 11:14:24 - agent-zxf-dsk - WARNING - 请求处理时间过长: 15.60s
+2026-04-13 13:49:23 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 13:49:23 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-13 13:49:29 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 13:49:29 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-13 14:36:49 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 14:36:49 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-13 14:36:55 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 14:36:55 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-13 14:37:55 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 14:37:55 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-13 14:38:00 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 14:38:00 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-13 14:45:48 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 14:45:48 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-13 14:45:54 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 14:45:54 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-13 14:50:17 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 14:50:17 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-13 14:50:17 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 14:51:23 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 14:51:29 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 14:58:39 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 14:59:07 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 14:59:25 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:00:33 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:00:44 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:00:49 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:04:28 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:05:32 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:06:23 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:06:29 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:07:27 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:07:33 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:15:05 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:15:11 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:34:00 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:34:06 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:45:02 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:45:18 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:46:16 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:47:00 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:47:06 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:51:28 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:52:39 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:52:45 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:53:02 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:53:30 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:53:36 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:54:56 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:56:16 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:56:22 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 15:59:06 - agent-zxf-dsk - INFO - 教育版聊天请求: 2026美伊战争预测...
+2026-04-13 15:59:06 - agent-zxf-dsk - ERROR - 并行API调用（教育版）失败: Client.__init__() got an unexpected keyword argument 'proxies'
+2026-04-13 15:59:06 - agent-zxf-dsk - INFO - 教育版聊天完成，耗时: 0.01秒
+2026-04-13 16:03:03 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:04:43 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:04:49 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:09:56 - agent-zxf-dsk - INFO - 聊天请求: 计算机专业...
+2026-04-13 16:09:56 - agent-zxf-dsk - ERROR - 并行API调用失败: set_cache() got an unexpected keyword argument 'ttl'
+2026-04-13 16:09:56 - agent-zxf-dsk - INFO - 聊天完成，耗时: 0.06秒
+2026-04-13 16:11:09 - agent-zxf-dsk - INFO - 教育版聊天请求: 2026美伊战争...
+2026-04-13 16:11:09 - agent-zxf-dsk - ERROR - 并行API调用（教育版）失败: set_cache() got an unexpected keyword argument 'ttl'
+2026-04-13 16:11:09 - agent-zxf-dsk - INFO - 教育版聊天完成，耗时: 0.02秒
+2026-04-13 16:12:51 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:12:56 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:13:08 - agent-zxf-dsk - INFO - 教育版聊天请求: 2026美伊战争...
+2026-04-13 16:13:08 - agent-zxf-dsk - INFO - 教育版聊天请求: 2026美伊战争...
+2026-04-13 16:13:08 - agent-zxf-dsk - ERROR - 并行API调用（教育版）失败: Client.__init__() got an unexpected keyword argument 'proxies'
+2026-04-13 16:13:08 - agent-zxf-dsk - INFO - 教育版聊天完成，耗时: 0.01秒
+2026-04-13 16:13:08 - agent-zxf-dsk - ERROR - 并行API调用（教育版）失败: Client.__init__() got an unexpected keyword argument 'proxies'
+2026-04-13 16:13:08 - agent-zxf-dsk - INFO - 教育版聊天完成，耗时: 0.00秒
+2026-04-13 16:15:05 - agent-zxf-dsk - INFO - 聊天请求: 计算机专业...
+2026-04-13 16:15:05 - agent-zxf-dsk - ERROR - 并行API调用失败: Client.__init__() got an unexpected keyword argument 'proxies'
+2026-04-13 16:15:05 - agent-zxf-dsk - INFO - 聊天完成，耗时: 0.00秒
+2026-04-13 16:23:16 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:24:39 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:24:45 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:27:20 - agent-zxf-dsk - INFO - 聊天请求: 计算机专业...
+2026-04-13 16:27:20 - agent-zxf-dsk - ERROR - 并行API调用失败: set_cache() got an unexpected keyword argument 'ttl'
+2026-04-13 16:27:20 - agent-zxf-dsk - INFO - 聊天完成，耗时: 0.04秒
+2026-04-13 16:34:13 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:34:31 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:34:37 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:36:29 - agent-zxf-dsk - INFO - 聊天请求: 计算机专业...
+2026-04-13 16:36:29 - agent-zxf-dsk - ERROR - 并行API调用失败: can only concatenate str (not "NoneType") to str
+2026-04-13 16:36:29 - agent-zxf-dsk - INFO - 聊天完成，耗时: 0.03秒
+2026-04-13 16:43:28 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:43:34 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:43:55 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:46:07 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:46:13 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 16:48:02 - agent-zxf-dsk - INFO - 聊天请求: 计算机专业前景怎么样？...
+2026-04-13 16:48:02 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 计算机专业前景怎么样？...
+2026-04-13 16:48:13 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 11.10s, 回答长度 388
+2026-04-13 16:48:13 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 11.102秒
+2026-04-13 16:48:13 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 11.102秒
+2026-04-13 16:48:13 - agent-zxf-dsk - INFO - 聊天完成，耗时: 11.13秒
+2026-04-13 17:14:24 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 17:14:30 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 17:15:03 - agent-zxf-dsk - INFO - 聊天请求: 计算机专业...
+2026-04-13 17:15:04 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 计算机专业...
+2026-04-13 17:15:17 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 13.48s, 回答长度 478
+2026-04-13 17:15:17 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 13.486秒
+2026-04-13 17:15:17 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 13.486秒
+2026-04-13 17:15:18 - agent-zxf-dsk - INFO - 聊天完成，耗时: 15.52秒
+2026-04-13 17:15:38 - agent-zxf-dsk - INFO - 聊天请求: 计算机专业...
+2026-04-13 17:15:49 - agent-zxf-dsk - INFO - 聊天完成，耗时: 11.74秒
+2026-04-13 17:21:24 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 17:22:05 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 17:41:39 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 17:41:45 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 17:42:04 - agent-zxf-dsk - INFO - 聊天请求: 计算机专业...
+2026-04-13 17:42:05 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 计算机专业...
+2026-04-13 17:42:05 - agent-zxf-dsk - WARNING - DeepSeek API调用失败 (尝试 1): HTTP 402
+2026-04-13 17:42:05 - agent-zxf-dsk - INFO - 等待 1s 后重试...
+2026-04-13 17:42:06 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 2/3): 计算机专业...
+2026-04-13 17:42:07 - agent-zxf-dsk - WARNING - DeepSeek API调用失败 (尝试 2): HTTP 402
+2026-04-13 17:42:07 - agent-zxf-dsk - INFO - 等待 2s 后重试...
+2026-04-13 17:42:09 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 3/3): 计算机专业...
+2026-04-13 17:42:10 - agent-zxf-dsk - WARNING - DeepSeek API调用失败 (尝试 3): HTTP 402
+2026-04-13 17:42:10 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 5.212秒
+2026-04-13 17:42:10 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 5.212秒
+2026-04-13 17:42:11 - agent-zxf-dsk - INFO - 聊天完成，耗时: 7.40秒
+2026-04-13 17:52:38 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-13 17:53:00 - agent-zxf-dsk - INFO - 应用ID调用请求: 计算机专业...
+2026-04-13 17:53:00 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 计算机专业...
+2026-04-13 17:53:48 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 47.55秒，状态码: 200
+2026-04-13 17:53:48 - agent-zxf-dsk - INFO - 应用ID调用完成，耗时: 47.59秒

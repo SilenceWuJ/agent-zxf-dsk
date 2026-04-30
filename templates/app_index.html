@@ -1,0 +1,433 @@
+{% extends "base.html" %}
+
+{% set hide_main_js = true %}
+
+{% block title %}xixi的AI探索 · 应用版{% endblock %}
+
+{% block content %}
+<div class="app-wrapper">
+    <!-- 头部区域 -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>xixi的AI探索 · 应用版</h1>
+                    <p class="subtitle">基于应用ID的智能对话助手</p>
+                </div>
+            </div>
+            <div class="header-tagline">
+                <span class="tagline" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">智能上下文理解</span>
+                <a href="/" class="back-to-home" style="margin-left: 15px; color: #f5576c; text-decoration: none;">
+                    <i class="fas fa-home"></i> 返回主页
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区域 -->
+    <main class="main-content">
+        <div class="chat-container">
+            <!-- 聊天历史区域 -->
+            <div class="chat-history" id="chatHistory">
+                <div class="welcome-message">
+                    <div class="message-avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="sender-name">AI助手·应用版</span>
+                            <span class="message-time">现在</span>
+                        </div>
+                        <div class="message-text">
+                            你好！我是AI助手·应用版。基于阿里云百炼应用ID，提供更智能的上下文理解和个性化建议！
+                            <br><br>
+                            <strong>高级功能包括：</strong>
+                            <ul>
+                                <li>智能上下文感知对话</li>
+                                <li>个性化学习路径推荐</li>
+                                <li>多轮对话记忆</li>
+                                <li>企业级API稳定性</li>
+                                <li>智能缓存加速</li>
+                            </ul>
+                            <br>
+                            <strong>使用提示：</strong>
+                            <ul>
+                                <li>我可以记住我们的对话历史，提供连贯的建议</li>
+                                <li>支持上传相关文档或上下文信息</li>
+                                <li>回答更加个性化和精准</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 输入区域 -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <div class="input-container">
+                        <textarea 
+                            id="questionInput" 
+                            placeholder="输入你的问题，比如：'基于我的成绩，推荐什么专业？' 或 '帮我规划一下考研路线...'"
+                            rows="3"
+                            aria-label="输入问题"
+                            enterkeyhint="send"
+                        ></textarea>
+                        <div class="input-actions">
+                            <button class="btn-send" id="sendButton" aria-label="发送消息" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <i class="fas fa-paper-plane"></i>
+                                <span class="btn-text">发送</span>
+                            </button>
+                            <button class="btn-voice" id="voiceButton" aria-label="语音输入" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <button class="btn-context" id="contextButton" aria-label="添加上下文" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); margin-left: 10px;">
+                                <i class="fas fa-file-upload"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="input-hint">
+                        <i class="fas fa-lightbulb" style="color: #f5576c;"></i>
+                        <span>按 Enter 发送，Shift+Enter 换行 | 支持多轮对话记忆</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 侧边栏信息 -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3><i class="fas fa-star" style="color: #f5576c;"></i> 版本特性</h3>
+                <ul class="style-list">
+                    <li><i class="fas fa-check-circle" style="color: #f5576c;"></i> 应用ID驱动智能对话</li>
+                    <li><i class="fas fa-check-circle" style="color: #f5576c;"></i> 上下文感知个性化建议</li>
+                    <li><i class="fas fa-check-circle" style="color: #f5576c;"></i> 多轮对话记忆管理</li>
+                    <li><i class="fas fa-check-circle" style="color: #f5576c;"></i> 企业级API稳定性</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-card">
+                <h3><i class="fas fa-cogs" style="color: #f5576c;"></i> 技术优势</h3>
+                <ul class="knowledge-list">
+                    <li>阿里云百炼应用ID</li>
+                    <li>智能缓存机制</li>
+                    <li>会话状态管理</li>
+                    <li>实时性能监控</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-card">
+                <h3><i class="fas fa-info-circle" style="color: #f5576c;"></i> 会话信息</h3>
+                <div class="session-info">
+                    <div class="session-item">
+                        <span>会话ID:</span>
+                        <code id="sessionId">正在生成...</code>
+                    </div>
+                    <div class="session-item">
+                        <span>对话轮数:</span>
+                        <span id="turnCount">0</span>
+                    </div>
+                    <div class="session-item">
+                        <span>缓存状态:</span>
+                        <span id="cacheStatus">启用</span>
+                    </div>
+                    <div class="session-item">
+                        <button id="clearSessionBtn" class="btn-clear" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <i class="fas fa-redo"></i> 清空会话
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- 上下文上传模态框 -->
+    <div class="modal-overlay" id="contextModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-file-upload"></i> 添加上下文信息</h3>
+                <button class="modal-close" id="closeContextModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="contextText">上下文信息（可选）:</label>
+                    <textarea 
+                        id="contextText" 
+                        placeholder="可以在这里粘贴相关的文档内容、成绩信息、个人背景等，帮助AI更好地理解你的情况..."
+                        rows="6"
+                    ></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="contextFile">上传文件（可选）:</label>
+                    <input type="file" id="contextFile" accept=".txt,.pdf,.doc,.docx">
+                    <small>支持文本文件、PDF、Word文档</small>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" id="cancelContext">取消</button>
+                <button class="btn-confirm" id="confirmContext" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">确认添加</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加载状态 -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <p>智能分析中</p>
+            <p class="loading-subtext">应用ID处理中...</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // 应用版特定的JavaScript功能
+    let sessionId = null;
+    let turnCount = 0;
+    let currentContext = '';
+    
+    // 初始化会话
+    function initSession() {
+        sessionId = 'app_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        document.getElementById('sessionId').textContent = sessionId.substring(0, 15) + '...';
+        turnCount = 0;
+        updateTurnCount();
+    }
+    
+    // 更新对话轮数
+    function updateTurnCount() {
+        document.getElementById('turnCount').textContent = turnCount;
+    }
+    
+    // 发送消息到应用ID接口
+    async function sendMessageToApp(question, context = '') {
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        loadingOverlay.style.display = 'flex';
+        
+        try {
+            const response = await fetch('/app/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    question: question,
+                    context: context,
+                    session_id: sessionId,
+                    use_cache: true
+                })
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                // 增加对话轮数
+                turnCount++;
+                updateTurnCount();
+                
+                // 显示回答
+                displayMessage(data.answer, 'assistant');
+                
+                // 如果有音频，播放
+                if (data.audio_base64) {
+                    playAudio(data.audio_base64);
+                }
+            } else {
+                displayMessage(`抱歉，应用版暂时无法回答。错误: ${data.error || '未知错误'}`, 'assistant');
+            }
+        } catch (error) {
+            console.error('发送消息失败:', error);
+            displayMessage('网络错误，请稍后重试。', 'assistant');
+        } finally {
+            loadingOverlay.style.display = 'none';
+        }
+    }
+    
+    // 显示消息
+    function displayMessage(text, sender) {
+        const chatHistory = document.getElementById('chatHistory');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = sender === 'user' ? 'user-message' : 'assistant-message';
+        
+        const time = new Date().toLocaleTimeString('zh-CN', { 
+            hour: '2-digit', 
+            minute: '2-digit' 
+        });
+        
+        messageDiv.innerHTML = `
+            <div class="message-avatar ${sender === 'user' ? 'user-avatar' : 'assistant-avatar'}">
+                <i class="fas ${sender === 'user' ? 'fa-user' : 'fa-user-tie'}"></i>
+            </div>
+            <div class="message-content">
+                <div class="message-header">
+                    <span class="sender-name">${sender === 'user' ? '你' : 'AI助手·应用版'}</span>
+                    <span class="message-time">${time}</span>
+                </div>
+                <div class="message-text">${text}</div>
+            </div>
+        `;
+        
+        chatHistory.appendChild(messageDiv);
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+    }
+    
+    // 播放音频
+    function playAudio(base64Data) {
+        const audioPlayer = document.getElementById('audioPlayer');
+        const audioElement = document.getElementById('audioElement');
+        const audioStatus = document.getElementById('audioStatus');
+        
+        if (audioPlayer && audioElement) {
+            audioPlayer.style.display = 'block';
+            audioElement.src = 'data:audio/mp3;base64,' + base64Data;
+            audioElement.play().catch(e => {
+                console.error('播放音频失败:', e);
+                audioStatus.textContent = '语音播放失败';
+            });
+        }
+    }
+    
+    // 初始化页面
+    document.addEventListener('DOMContentLoaded', function() {
+        // 初始化会话
+        initSession();
+        
+        // 获取DOM元素
+        const questionInput = document.getElementById('questionInput');
+        const sendButton = document.getElementById('sendButton');
+        const voiceButton = document.getElementById('voiceButton');
+        const contextButton = document.getElementById('contextButton');
+        const clearSessionBtn = document.getElementById('clearSessionBtn');
+        const contextModal = document.getElementById('contextModal');
+        const closeContextModal = document.getElementById('closeContextModal');
+        const cancelContext = document.getElementById('cancelContext');
+        const confirmContext = document.getElementById('confirmContext');
+        const contextText = document.getElementById('contextText');
+        const contextFile = document.getElementById('contextFile');
+        
+        // 发送消息
+        function sendMessage() {
+            const question = questionInput.value.trim();
+            if (!question) return;
+            
+            // 显示用户消息
+            displayMessage(question, 'user');
+            
+            // 发送到应用ID接口
+            sendMessageToApp(question, currentContext);
+            
+            // 清空输入框
+            questionInput.value = '';
+            
+            // 重置上下文（每次对话后清空，避免重复使用）
+            currentContext = '';
+        }
+        
+        // 发送按钮点击事件
+        sendButton.addEventListener('click', sendMessage);
+        
+        // 输入框回车事件
+        questionInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+        
+        // 语音按钮点击事件
+        voiceButton.addEventListener('click', function() {
+            // 语音输入功能（需要浏览器支持）
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                const recognition = new SpeechRecognition();
+                recognition.lang = 'zh-CN';
+                recognition.interimResults = false;
+                
+                recognition.onresult = function(event) {
+                    const transcript = event.results[0][0].transcript;
+                    questionInput.value = transcript;
+                };
+                
+                recognition.start();
+            } else {
+                alert('您的浏览器不支持语音输入功能');
+            }
+        });
+        
+        // 上下文按钮点击事件
+        contextButton.addEventListener('click', function() {
+            contextModal.style.display = 'flex';
+        });
+        
+        // 关闭上下文模态框
+        closeContextModal.addEventListener('click', function() {
+            contextModal.style.display = 'none';
+        });
+        
+        cancelContext.addEventListener('click', function() {
+            contextModal.style.display = 'none';
+        });
+        
+        // 确认添加上下文
+        confirmContext.addEventListener('click', function() {
+            const text = contextText.value.trim();
+            const file = contextFile.files[0];
+            
+            if (text) {
+                currentContext = text;
+                displayMessage('已添加上下文信息，AI将基于此进行分析。', 'system');
+            }
+            
+            if (file) {
+                // 简单处理文本文件
+                if (file.type.includes('text') || file.name.endsWith('.txt')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        currentContext += '\n\n文件内容：\n' + e.target.result;
+                        displayMessage(`已上传文件: ${file.name}，AI将基于文件内容进行分析。`, 'system');
+                    };
+                    reader.readAsText(file);
+                } else {
+                    displayMessage(`已上传文件: ${file.name}（非文本文件，仅记录文件名）`, 'system');
+                    currentContext += `\n\n上传文件: ${file.name}`;
+                }
+            }
+            
+            contextText.value = '';
+            contextFile.value = '';
+            contextModal.style.display = 'none';
+        });
+        
+        // 清空会话
+        clearSessionBtn.addEventListener('click', function() {
+            if (confirm('确定要清空当前会话吗？这将重置对话历史。')) {
+                const chatHistory = document.getElementById('chatHistory');
+                const welcomeMessage = chatHistory.querySelector('.welcome-message');
+                
+                // 清空除欢迎消息外的所有消息
+                while (chatHistory.children.length > 1) {
+                    chatHistory.removeChild(chatHistory.lastChild);
+                }
+                
+                // 重置会话
+                initSession();
+                currentContext = '';
+                
+                displayMessage('会话已重置，可以开始新的对话。', 'system');
+            }
+        });
+        
+        // 初始化音频状态
+        const audioStatus = document.getElementById('audioStatus');
+        if (audioStatus) {
+            audioStatus.textContent = '语音功能: 待检测';
+        }
+    });
+</script>
+{% endblock %}

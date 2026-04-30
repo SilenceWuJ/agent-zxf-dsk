@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智研空间 · 工作台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #0c1445 0%, #1a1f5c 30%, #2d1b4e 60%, #1d3a5c 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
+        }
+        .container { max-width: 900px; width: 100%; margin: 0 auto; }
+
+        /* ===== Header ===== */
+        .header { text-align: center; margin-bottom: 40px; color: white; }
+        .header h1 {
+            font-size: 2.6rem; font-weight: 700; margin-bottom: 8px;
+            background: linear-gradient(90deg, #00f5d4, #00d4ff, #7b68ee, #f472b6);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 300% 100%;
+            animation: gradientMove 8s ease infinite;
+        }
+        @keyframes gradientMove {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .header .subtitle { font-size: 1.1rem; opacity: 0.8; max-width: 500px; margin: 0 auto; line-height: 1.6; }
+
+        /* ===== Category Section ===== */
+        .category { margin-bottom: 36px; }
+        .category-header {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 1.2rem; font-weight: 600; color: rgba(255,255,255,0.85);
+            margin-bottom: 16px; padding-left: 4px;
+        }
+        .category-header i { font-size: 1.3rem; }
+        .category-header .badge-count {
+            background: rgba(255,255,255,0.15); padding: 2px 12px;
+            border-radius: 20px; font-size: 0.8rem; font-weight: 400;
+        }
+        .category-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        /* ===== Card Base ===== */
+        .card {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 20px;
+            padding: 30px 28px;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            background: rgba(255,255,255,0.10);
+            border-color: rgba(255,255,255,0.20);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .card::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            border-radius: 20px 20px 0 0;
+        }
+        .card-icon {
+            width: 64px; height: 64px; border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; color: white; margin-bottom: 18px;
+        }
+        .card h3 { font-size: 1.4rem; font-weight: 600; color: white; margin-bottom: 8px; }
+        .card p { color: rgba(255,255,255,0.6); line-height: 1.6; font-size: 0.95rem; margin-bottom: 16px; }
+        .card .features {
+            display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;
+        }
+        .card .features span {
+            background: rgba(255,255,255,0.08);
+            padding: 4px 12px; border-radius: 20px;
+            font-size: 0.8rem; color: rgba(255,255,255,0.7);
+        }
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: 8px; padding: 12px 24px; border-radius: 12px;
+            font-size: 1rem; font-weight: 600; text-decoration: none;
+            border: none; cursor: pointer; width: 100%;
+            transition: all 0.3s ease; color: white;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+
+        /* ===== Card Variants ===== */
+        .card-cyborg .card-icon { background: linear-gradient(135deg, #00f5d4 0%, #00d4ff 100%); }
+        .card-cyborg::after { background: linear-gradient(90deg, #00f5d4 0%, #00d4ff 100%); }
+        .btn-cyborg { background: linear-gradient(135deg, #00f5d4 0%, #00d4ff 100%); }
+
+        .card-tool .card-icon { background: linear-gradient(135deg, #34d399 0%, #10b981 100%); }
+        .card-tool::after { background: linear-gradient(90deg, #34d399 0%, #10b981 100%); }
+        .btn-tool { background: linear-gradient(135deg, #34d399 0%, #10b981 100%); }
+
+        .card-qa .card-icon { background: linear-gradient(135deg, #fb923c 0%, #f97316 100%); }
+        .card-qa::after { background: linear-gradient(90deg, #fb923c 0%, #f97316 100%); }
+        .btn-qa { background: linear-gradient(135deg, #fb923c 0%, #f97316 100%); }
+
+        /* ===== Agent Preview Tags ===== */
+        .agent-preview { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+        .agent-tag {
+            display: inline-flex; align-items: center; gap: 5px;
+            background: rgba(255,255,255,0.08); padding: 5px 12px;
+            border-radius: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.75);
+        }
+        .agent-tag i { font-size: 0.75rem; }
+
+        /* ===== Footer ===== */
+        .footer { text-align: center; margin-top: 40px; color: rgba(255,255,255,0.35); font-size: 0.85rem; }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 640px) {
+            body { padding: 20px 14px; }
+            .header h1 { font-size: 1.8rem; }
+            .category-cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>智研空间 · 工作台</h1>
+            <p class="subtitle">AI 智能体对话 · 文档智能处理 · 统一工作入口</p>
+        </div>
+
+        <!-- ===== Category 1: AI 智能体 ===== -->
+        <div class="category">
+            <div class="category-header">
+                <i class="fas fa-robot"></i> AI 智能体
+                <span class="badge-count">3 个智能体</span>
+            </div>
+            <div class="category-cards">
+                <div class="card card-cyborg">
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI 智能体对话</h3>
+                    <p>与多个专业 AI 智能体进行深度对话，涵盖学业规划、专业咨询、历史思辨等场景。</p>
+                    <div class="agent-preview">
+                        <span class="agent-tag"><i class="fas fa-graduation-cap"></i> 志愿规划顾问</span>
+                        <span class="agent-tag"><i class="fas fa-user-tie"></i> 深度咨询助手</span>
+                        <span class="agent-tag"><i class="fas fa-book"></i> 历史思想顾问</span>
+                    </div>
+                    <button class="btn btn-cyborg" onclick="location.href='/cyborg'">
+                        选择智能体 <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Category 2: 办公工具 ===== -->
+        <div class="category">
+            <div class="category-header">
+                <i class="fas fa-tools"></i> 办公工具
+                <span class="badge-count">1 个工具</span>
+            </div>
+            <div class="category-cards">
+                <div class="card card-tool" onclick="location.href='/word/'">
+                    <div class="card-icon"><i class="fas fa-file-word"></i></div>
+                    <h3>Word 文档智能填充</h3>
+                    <p>上传 Word 模板，智能识别 {{占位符}}，语音输入填写，AI 排版检查，在线编辑并下载。</p>
+                    <div class="features">
+                        <span>📤 模板上传</span>
+                        <span>🎤 语音输入</span>
+                        <span>🤖 AI 检查</span>
+                        <span>📝 在线编辑</span>
+                        <span>⬇️ 一键下载</span>
+                    </div>
+                    <button class="btn btn-tool" onclick="event.stopPropagation(); location.href='/word/'">
+                        打开工具 <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Category 3: 测试平台 ===== -->
+        <div class="category">
+            <div class="category-header">
+                <i class="fas fa-vial"></i> 测试平台
+                <span class="badge-count">1 个平台</span>
+            </div>
+            <div class="category-cards">
+                <div class="card card-qa" onclick="window.open('http://localhost:8080/dashboard', '_blank')">
+                    <div class="card-icon"><i class="fas fa-flask"></i></div>
+                    <h3>QA 测试管理平台</h3>
+                    <p>测试用例管理、需求跟踪、执行监控、缺陷报告一站式平台，支持 WebSocket 实时通信。</p>
+                    <div class="features">
+                        <span>📋 用例管理</span>
+                        <span>📌 需求跟踪</span>
+                        <span>⚡ 执行监控</span>
+                        <span>📊 报告分析</span>
+                        <span>🔔 实时通知</span>
+                    </div>
+                    <button class="btn btn-qa" onclick="event.stopPropagation(); window.open('http://localhost:8080/dashboard', '_blank')">
+                        打开平台 <i class="fas fa-external-link-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2024 智研空间 | AI 智能体对话 · 文档智能处理 · 测试管理平台</p>
+        </div>
+    </div>
+
+    <script>
+        // 键盘快捷键
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '1') location.href = '/cyborg';
+            else if (e.key === '2') location.href = '/word/';
+            else if (e.key === '3') window.open('http://localhost:8080/dashboard', '_blank');
+        });
+        // 渐入动画
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => document.body.style.opacity = '1', 50);
+        });
+    </script>
+</body>
+</html>

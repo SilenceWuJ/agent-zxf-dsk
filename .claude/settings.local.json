@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -i proxies /Users/xixi/inv-agent/agent-zxf-dsk/venv/lib/python3.14/site-packages/openai/*.py)",
+      "Bash(source venv/bin/activate)",
+      "Bash(find venv/lib/python3.14/site-packages/dashscope -name *.py -exec grep -l class.*Client {})",
+      "Bash(2)",
+      "Bash(python -c \"import httpx; import inspect; print\\(inspect.signature\\(httpx.Client.__init__\\)\\)\")",
+      "Bash(grep -rn \"http_client\\\\|HttpxClient\" . --include=*.py)",
+      "Bash(python -c \"from openai import OpenAI; import inspect; client = OpenAI\\(api_key=''''test'''', base_url=''''http://test''''\\); print\\(dir\\(client\\)\\)\")",
+      "Bash(python -c \"from openai import OpenAI; client = OpenAI\\(api_key=''test'', base_url=''http://test''\\); print\\(dir\\(client.responses\\)\\)\")",
+      "Bash(python -c \":*)",
+      "Bash(timeout 5 python app_with_auth.py)",
+      "Bash(python3 -m py_compile app.py)",
+      "Bash(python3 -m py_compile models.py)"
+    ]
+  }
+}

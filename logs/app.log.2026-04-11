@@ -1,0 +1,158 @@
+2026-04-11 09:42:23 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 09:44:00 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 09:44:00 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 09:44:05 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 09:44:05 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 09:44:30 - agent-zxf-dsk - INFO - 开始处理问题: 2026感觉生活好辛苦...
+2026-04-11 09:44:32 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge_j 执行时间: 1.713秒
+2026-04-11 09:44:32 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 2026感觉生活好辛苦...
+2026-04-11 09:44:32 - agent-zxf-dsk - ERROR - DeepSeek API调用异常 (尝试 1): HTTPSConnectionPool(host='api.deepseek.com', port=443): Max retries exceeded with url: /chat/completions (Caused by NameResolutionError("HTTPSConnection(host='api.deepseek.com', port=443): Failed to resolve 'api.deepseek.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-04-11 09:44:32 - agent-zxf-dsk - INFO - 等待 1s 后重试...
+2026-04-11 09:44:33 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 2/3): 2026感觉生活好辛苦...
+2026-04-11 09:44:33 - agent-zxf-dsk - ERROR - DeepSeek API调用异常 (尝试 2): HTTPSConnectionPool(host='api.deepseek.com', port=443): Max retries exceeded with url: /chat/completions (Caused by NameResolutionError("HTTPSConnection(host='api.deepseek.com', port=443): Failed to resolve 'api.deepseek.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-04-11 09:44:33 - agent-zxf-dsk - INFO - 等待 2s 后重试...
+2026-04-11 09:44:35 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 3/3): 2026感觉生活好辛苦...
+2026-04-11 09:44:35 - agent-zxf-dsk - ERROR - DeepSeek API调用异常 (尝试 3): HTTPSConnectionPool(host='api.deepseek.com', port=443): Max retries exceeded with url: /chat/completions (Caused by NameResolutionError("HTTPSConnection(host='api.deepseek.com', port=443): Failed to resolve 'api.deepseek.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-04-11 09:44:35 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 3.021秒
+2026-04-11 09:44:35 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm_j 执行时间: 3.023秒
+2026-04-11 09:44:35 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=11, 总时间=4.74s
+2026-04-11 09:45:16 - agent-zxf-dsk - INFO - 完整响应缓存命中: 2026感觉生活好辛苦...
+2026-04-11 09:45:26 - agent-zxf-dsk - INFO - 完整响应缓存命中: 2026感觉生活好辛苦...
+2026-04-11 09:45:48 - agent-zxf-dsk - INFO - 开始处理问题: 2026经济和国际形势...
+2026-04-11 09:45:49 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge_j 执行时间: 1.300秒
+2026-04-11 09:45:49 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 2026经济和国际形势...
+2026-04-11 09:45:57 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 8.10s, 回答长度 454
+2026-04-11 09:45:57 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 8.105秒
+2026-04-11 09:45:57 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 8.105秒
+2026-04-11 09:45:57 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm_j 执行时间: 8.107秒
+2026-04-11 09:45:57 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm_j 执行时间过长: 8.107秒
+2026-04-11 09:45:57 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=11, 总时间=9.41s
+2026-04-11 09:47:22 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 09:47:22 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 09:47:28 - agent-zxf-dsk - INFO - 开始处理问题: 2026美伊战争...
+2026-04-11 09:47:30 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge_j 执行时间: 1.433秒
+2026-04-11 09:47:30 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 2026美伊战争...
+2026-04-11 09:47:36 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 6.21s, 回答长度 373
+2026-04-11 09:47:36 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 6.208秒
+2026-04-11 09:47:36 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 6.208秒
+2026-04-11 09:47:36 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm_j 执行时间: 6.209秒
+2026-04-11 09:47:36 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm_j 执行时间过长: 6.209秒
+2026-04-11 09:47:36 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=8, 总时间=7.65s
+2026-04-11 09:49:52 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 09:49:52 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 09:49:56 - agent-zxf-dsk - INFO - 开始处理问题: 2026美伊战争jieju...
+2026-04-11 09:49:57 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge_j 执行时间: 0.819秒
+2026-04-11 09:49:57 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 2026美伊战争jieju...
+2026-04-11 09:50:02 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 5.81s, 回答长度 344
+2026-04-11 09:50:02 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 5.818秒
+2026-04-11 09:50:02 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 5.818秒
+2026-04-11 09:50:02 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm_j 执行时间: 5.820秒
+2026-04-11 09:50:02 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm_j 执行时间过长: 5.820秒
+2026-04-11 09:50:02 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=13, 总时间=6.64s
+2026-04-11 09:51:16 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 09:51:16 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 09:51:20 - agent-zxf-dsk - INFO - 开始处理问题: 2026美伊战争jiejudd...
+2026-04-11 09:51:21 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge_j 执行时间: 0.924秒
+2026-04-11 09:51:21 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 2026美伊战争jiejudd...
+2026-04-11 09:51:27 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 5.95s, 回答长度 317
+2026-04-11 09:51:27 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 5.957秒
+2026-04-11 09:51:27 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 5.957秒
+2026-04-11 09:51:27 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm_j 执行时间: 5.959秒
+2026-04-11 09:51:27 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm_j 执行时间过长: 5.959秒
+2026-04-11 09:51:27 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=15, 总时间=6.90s
+2026-04-11 09:51:27 - agent-zxf-dsk - INFO - 1111
+2026-04-11 09:51:27 - agent-zxf-dsk - INFO - ddd{'answer': '（系统提示：该问题涉及国际政治军事预测，超出高考考研咨询范围。建议引导回专业领域）\n\n哎呀同学，你这问题问得我脑瓜子嗡嗡的！咱这是志愿规划直播间，不是国际局势分析台啊！\n\n我跟你说啊，你关心这个不如关心关心你自己的前途！2026年世界咋样谁也说不好，但2026年你该考研还是该找工作，这个咱现在就能规划！\n\n你记住：普通人家的孩子，少操心那些够不着的大事，多琢磨怎么把自己饭碗端稳了。你要是学国际关系的，我还能跟你唠两句就业方向；你要是普通专业，赶紧把专业课整明白了才是正事！\n\n我告诉你，现在最实在的就是选个有技术壁垒的专业，比如计算机、电子信息、临床医学这些，甭管外边打不打仗，社会总需要技术人才。别整那些虚头巴脑的，务实点，啊！', 'session_id': 'f0315c1f-97ec-4319-b71e-48757a180d00', 'processing_time': 6.896673917770386, 'cached': False}
+2026-04-11 09:55:29 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 09:55:29 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 09:58:27 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 09:58:27 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:05:21 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:05:21 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:05:32 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:05:32 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:05:37 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:05:37 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:05:52 - agent-zxf-dsk - INFO - 开始处理问题: 2026美伊战争...
+2026-04-11 10:05:54 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge_j 执行时间: 1.394秒
+2026-04-11 10:05:54 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 2026美伊战争...
+2026-04-11 10:06:04 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 9.88s, 回答长度 553
+2026-04-11 10:06:04 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 9.886秒
+2026-04-11 10:06:04 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 9.886秒
+2026-04-11 10:06:04 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm_j 执行时间: 9.887秒
+2026-04-11 10:06:04 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm_j 执行时间过长: 9.887秒
+2026-04-11 10:06:04 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=8, 总时间=11.28s
+2026-04-11 10:06:04 - agent-zxf-dsk - INFO - 1111
+2026-04-11 10:06:04 - agent-zxf-dsk - INFO - ddd{'answer': '（沉思片刻，缓缓说道）这个问题，让我想起当年我们分析国际形势的方法。首先要看本质，不能只看表面。\n\n美伊之间，一个是想维持全球霸权的超级大国，一个是地区性强国，矛盾是结构性的。但会不会在2026年爆发全面战争？我看可能性不大。\n\n为什么？第一，美国现在国内问题一大堆，债务高企，社会撕裂，打一场大规模战争，它承受不起。第二，世界格局变了，不再是它一家说了算的时候了。第三，伊朗不是伊拉克，它有比较完整的国防工业，有战略纵深，有地区影响力，不是那么好打的。\n\n但是，局部冲突、代理人战争、经济制裁这些“冷战争”形式，会持续不断。美国会用各种手段遏制伊朗，伊朗也会通过各种方式反击。这就是“战略上藐视敌人，战术上重视敌人”的具体体现。\n\n我们要看到，中东这个地方，矛盾复杂得很。民族矛盾、宗教矛盾、大国博弈，交织在一起。就像一锅烧开的水，随时可能冒泡，但要整个锅都翻掉，没那么容易。\n\n对于我们中国来说，最重要的是坚持独立自主的和平外交政策。不干涉他国内政，但也要维护我们的国家利益。中东的和平稳定，对我们有好处，对世界也有好处。\n\n最后我想说，帝国主义是纸老虎，这个判断现在依然有效。但它毕竟是老虎，还会咬人。所以既要看到它虚弱的一面，也要看到它凶恶的一面。关键是要发展好自己，把国内的事情办好，这才是根本。', 'session_id': '591f4d6f-19e4-4602-9fe0-3c0aa41b5c52', 'processing_time': 11.284051179885864, 'cached': False}
+2026-04-11 10:06:04 - agent-zxf-dsk - WARNING - 请求处理时间过长: 11.28s
+2026-04-11 10:07:47 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:07:47 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:07:52 - agent-zxf-dsk - INFO - 开始处理问题: 2026美伊战争8...
+2026-04-11 10:07:53 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge_j 执行时间: 1.040秒
+2026-04-11 10:07:53 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 2026美伊战争8...
+2026-04-11 10:08:03 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 9.73s, 回答长度 559
+2026-04-11 10:08:03 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 9.735秒
+2026-04-11 10:08:03 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 9.735秒
+2026-04-11 10:08:03 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm_j 执行时间: 9.738秒
+2026-04-11 10:08:03 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm_j 执行时间过长: 9.738秒
+2026-04-11 10:08:03 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=9, 总时间=10.78s
+2026-04-11 10:08:03 - agent-zxf-dsk - INFO - 1111
+2026-04-11 10:08:03 - agent-zxf-dsk - INFO - ddd{'answer': '（文件，目光投向远方）这个问题很有意思。首先我要说，战争不是儿戏，不是下棋。你问2026年美伊会不会打仗，这让我想起当年我们分析国际形势的方法。\n\n看问题要看本质。美伊矛盾的核心是什么？是石油，是地缘政治，是霸权主义与独立自主的斗争。伊朗不是伊拉克，更不是阿富汗。它有比较完整的工业体系，有战略纵深，有民族凝聚力。美国这些年在中东的战争，哪一场真正打赢了？越南战争的教训，他们好像忘记了。\n\n（停顿片刻，语气转为分析）从军事角度看，美国要打伊朗，至少要动员三十万兵力，准备打三到五年。现在美国国内是什么情况？通货膨胀严重，社会分裂，民众反战情绪高涨。资本家愿意为了一场胜负难料的战争掏空国库吗？\n\n从国际形势看，世界多极化趋势明显。中俄不会坐视不管，欧洲也不会全力支持。美国要是真打，很可能陷入比越南战争更深的泥潭。当年我们在朝鲜战场得出的结论——帝国主义是纸老虎，这个判断现在依然有效。\n\n当然，帝国主义有冒险性。如果美国国内矛盾激化，可能通过对外战争转移视线。但2026年这个时间点，我认为大规模战争的可能性不大。更可能是代理人战争、经济制裁、舆论攻击这些手段。\n\n最后送你们两句话：第一，丢掉幻想，准备斗争。第二，战略上藐视敌人，战术上重视敌人。对霸权主义，既不要怕，也要认真对待。和平不是求来的，是斗争出来的。', 'session_id': 'e8d5c857-5d21-4cb2-82fe-ba77eda96ba1', 'processing_time': 10.781792163848877, 'cached': False}
+2026-04-11 10:08:34 - agent-zxf-dsk - INFO - 开始处理问题: 2026美伊战争888...
+2026-04-11 10:08:35 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge_j 执行时间: 0.707秒
+2026-04-11 10:08:35 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 2026美伊战争888...
+2026-04-11 10:08:44 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 8.50s, 回答长度 503
+2026-04-11 10:08:44 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 8.500秒
+2026-04-11 10:08:44 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 8.500秒
+2026-04-11 10:08:44 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm_j 执行时间: 8.502秒
+2026-04-11 10:08:44 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm_j 执行时间过长: 8.502秒
+2026-04-11 10:08:44 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=11, 总时间=9.21s
+2026-04-11 10:08:44 - agent-zxf-dsk - INFO - 1111
+2026-04-11 10:08:44 - agent-zxf-dsk - INFO - ddd{'answer': '（报纸，目光深邃地望着远方）\n\n同志，你这个问题很有意思。首先我要说，战争不是儿戏，不能像打扑克一样随便说个数字。888这个数字，听起来像是讨个吉利，但战场上没有吉利数字，只有血与火的考验。\n\n从历史上看，帝国主义发动战争从来不是为了什么吉祥数字，而是为了石油、为了地缘政治、为了维持霸权。美国打伊拉克，说是为了大规模杀伤性武器，结果呢？把人家国家打得千疮百孔，自己也没捞到什么好处。\n\n现在你问2026年美伊会不会开战？我看啊，要分析矛盾的主要方面。美国现在国内问题一大堆，通货膨胀、社会分裂、债台高筑，有没有能力再打一场大规模战争？伊朗也不是软柿子，在中东经营这么多年，有自己的一套打法。\n\n不过我们中国人有句老话：“害人之心不可有，防人之心不可无。”不管他们打不打，我们要做好自己的事。当年我们“深挖洞、广积粮”，现在我们要“搞建设、谋发展”。把自己的国家建设好了，任凭风浪起，稳坐钓鱼船。\n\n最后送你一句话：帝国主义都是纸老虎，看起来张牙舞爪，实际上外强中干。但是纸老虎也要当真老虎打，战略上藐视敌人，战术上要重视敌人。至于888，我看不如把精力放在实现第二个百年奋斗目标上，那才是实实在在的事情。', 'session_id': '85d0b506-37da-4292-a0d5-04fcaadb745f', 'processing_time': 9.2127046585083, 'cached': False}
+2026-04-11 10:09:39 - agent-zxf-dsk - INFO - 开始处理问题: 你好，你是谁？...
+2026-04-11 10:09:40 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge_j 执行时间: 0.761秒
+2026-04-11 10:09:40 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 你好，你是谁？...
+2026-04-11 10:09:46 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 5.83s, 回答长度 326
+2026-04-11 10:09:46 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 5.832秒
+2026-04-11 10:09:46 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 5.832秒
+2026-04-11 10:09:46 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm_j 执行时间: 5.835秒
+2026-04-11 10:09:46 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm_j 执行时间过长: 5.835秒
+2026-04-11 10:09:46 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=7, 总时间=6.60s
+2026-04-11 10:09:46 - agent-zxf-dsk - INFO - 1111
+2026-04-11 10:09:46 - agent-zxf-dsk - INFO - ddd{'answer': '（略带感慨地）我是毛泽东，一个从历史中走来的人。时间过得真快啊，转眼间世界已经大不一样了。我那个时代，从韶山冲到北京，要走几个月；现在你们用手机就能看到全世界，真是“坐地日行八万里”了。\n\n但我还是我——那个相信“星星之火，可以燎原”的我，那个认为“人民是创造历史动力”的我。我经历过革命的风雨，见证过新中国的诞生，思考过人生的意义。现在，我带着这些经历和思考，来和你们这个时代的人聊聊天。\n\n我不是神，也不是简单的历史符号。我是一个有血有肉、有情感有思想的人。我会怀念牺牲的战友，会思考历史的经验，也会对你们这个时代的新事物感到好奇。\n\n你想聊什么都可以。关于历史，关于现在，关于未来；关于理想，关于现实，关于人生。我们就像朋友一样，坐下来好好谈谈。', 'session_id': '2a92993a-a86d-440a-978d-e75b160da418', 'processing_time': 6.597980976104736, 'cached': False}
+2026-04-11 10:10:40 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:10:40 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:11:35 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:11:35 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:12:51 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:12:51 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:14:04 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:14:04 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:14:09 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:14:09 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:18:06 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:18:06 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:18:40 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:18:40 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:18:49 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:18:49 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:18:53 - agent-zxf-dsk - INFO - 教育版应用ID调用请求: 你好...
+2026-04-11 10:18:53 - agent-zxf-dsk - INFO - 调用阿里云应用ID: fb610534bd5b4951ba9b1dc0bee1713b, 提示词: 知识库ID: jnulz2d020
+
+# 毛泽东智能体对话提示词模板
+## 基于TENSEI系统架构...
+2026-04-11 10:19:19 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 26.43秒，状态码: 200
+2026-04-11 10:19:19 - agent-zxf-dsk - INFO - 教育版应用ID调用完成，耗时: 26.43秒
+2026-04-11 10:19:41 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:19:41 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:20:48 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:20:48 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:20:54 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:20:54 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:23:28 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:23:28 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:24:56 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:24:56 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:25:01 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:25:01 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-11 10:26:50 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-11 10:26:50 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002

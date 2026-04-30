@@ -1,0 +1,358 @@
+2026-04-27 16:59:44 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 17:00:33 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 17:00:33 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 17:00:33 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 17:00:39 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 17:00:39 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 17:00:39 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 17:01:39 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 17:01:39 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 17:01:39 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 17:01:45 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 17:01:45 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 17:01:45 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 17:02:05 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 17:37:24 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 17:37:25 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 17:37:25 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 17:37:30 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 17:37:30 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 17:37:30 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 17:37:54 - agent-zxf-dsk - ERROR - Word服务连接失败: http://localhost:3001
+2026-04-27 18:07:40 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:07:41 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:07:41 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:07:46 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:07:46 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:07:46 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:08:02 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:08:02 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:08:02 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:08:08 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:08:08 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:08:08 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:08:12 - agent-zxf-dsk - ERROR - Word服务连接失败: http://localhost:3001
+2026-04-27 18:14:27 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:14:27 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:14:27 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:14:39 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:14:39 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:14:39 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:15:22 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:15:22 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:15:22 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:15:28 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:15:28 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:15:28 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:16:37 - agent-zxf-dsk - ERROR - Word服务连接失败: http://localhost:3001
+2026-04-27 18:20:50 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:20:50 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:20:50 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:24:43 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:24:43 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:24:43 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:24:49 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:24:49 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:24:49 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:24:57 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:24:57 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:24:57 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:25:15 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:25:15 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:25:15 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:25:29 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:25:29 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:25:29 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:32:57 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:32:57 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:32:57 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:32:59 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:33:00 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务 + Word工具代理，端口: 5002
+2026-04-27 18:33:00 - agent-zxf-dsk - INFO - Word服务地址: http://localhost:3001
+2026-04-27 18:33:05 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:34:55 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:35:21 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:35:21 - agent-zxf-dsk - INFO - 📱 [短信验证码] 手机: 13800138000，验证码: 625815，有效期: 5分钟
+2026-04-27 18:35:21 - agent-zxf-dsk - INFO - 📱 [短信验证码] 手机: 13600000001，验证码: 969159，有效期: 5分钟
+2026-04-27 18:35:43 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:35:43 - agent-zxf-dsk - INFO - 📱 [短信验证码] 手机: 13800138000，验证码: 808620，有效期: 5分钟
+2026-04-27 18:35:44 - agent-zxf-dsk - INFO - 📱 [短信验证码] 手机: 13600000001，验证码: 312949，有效期: 5分钟
+2026-04-27 18:35:44 - agent-zxf-dsk - INFO - 新用户通过手机号自动注册: 13600000001 -> user_0001
+2026-04-27 18:35:54 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:36:12 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:36:13 - agent-zxf-dsk - INFO - 📱 [短信验证码] 手机: 13800138000，验证码: 302620，有效期: 5分钟
+2026-04-27 18:36:14 - agent-zxf-dsk - INFO - 📱 [短信验证码] 手机: 13600000001，验证码: 307000，有效期: 5分钟
+2026-04-27 18:36:14 - agent-zxf-dsk - INFO - 新用户通过手机号自动注册: 13600000001 -> user_0001
+2026-04-27 18:37:43 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:37:44 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 18:37:44 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 18:37:44 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 18:37:44 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 18:37:44 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 18:37:44 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 18:37:49 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:37:49 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 18:37:49 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 18:37:49 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 18:37:49 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 18:37:49 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 18:37:49 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 18:38:59 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:38:59 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 18:38:59 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 18:38:59 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 18:38:59 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 18:38:59 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 18:38:59 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 18:39:03 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:39:03 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 18:39:03 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 18:39:03 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 18:39:03 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 18:39:03 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 18:39:03 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 18:39:06 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:39:06 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 18:39:06 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 18:39:06 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 18:39:06 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 18:39:06 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 18:39:06 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 18:39:09 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:39:09 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 18:39:09 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 18:39:09 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 18:39:09 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 18:39:09 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 18:39:09 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 18:39:12 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 18:39:12 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 18:39:12 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 18:39:12 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 18:39:12 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 18:39:12 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 18:39:12 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 18:39:17 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 19:37:53 - agent-zxf-dsk - INFO - 📱 [短信验证码] 手机: 13600000001，验证码: 895035，有效期: 5分钟
+2026-04-27 19:51:29 - agent-zxf-dsk - INFO - 开始处理问题: 2026日美菲等8国联合在中国台海、南海军演分析...
+2026-04-27 19:51:31 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge_j 执行时间: 1.379秒
+2026-04-27 19:51:31 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 2026日美菲等8国联合在中国台海、南海军演分析...
+2026-04-27 19:51:51 - agent-zxf-dsk - ERROR - DeepSeek API调用异常 (尝试 1): HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+2026-04-27 19:51:51 - agent-zxf-dsk - INFO - 等待 1s 后重试...
+2026-04-27 19:51:52 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 2/3): 2026日美菲等8国联合在中国台海、南海军演分析...
+2026-04-27 19:52:13 - agent-zxf-dsk - ERROR - DeepSeek API调用异常 (尝试 2): HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+2026-04-27 19:52:13 - agent-zxf-dsk - INFO - 等待 2s 后重试...
+2026-04-27 19:52:15 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 3/3): 2026日美菲等8国联合在中国台海、南海军演分析...
+2026-04-27 19:52:35 - agent-zxf-dsk - ERROR - DeepSeek API调用异常 (尝试 3): HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+2026-04-27 19:52:35 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 64.310秒
+2026-04-27 19:52:35 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 64.310秒
+2026-04-27 19:52:35 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm_j 执行时间: 64.313秒
+2026-04-27 19:52:35 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm_j 执行时间过长: 64.313秒
+2026-04-27 19:52:35 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=24, 总时间=65.70s
+2026-04-27 19:52:35 - agent-zxf-dsk - WARNING - 请求处理时间过长: 65.70s
+2026-04-27 19:55:16 - agent-zxf-dsk - INFO - 开始处理问题: 计算机专业...
+2026-04-27 19:55:17 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 0.870秒
+2026-04-27 19:55:17 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 计算机专业...
+2026-04-27 19:55:38 - agent-zxf-dsk - ERROR - DeepSeek API调用异常 (尝试 1): HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+2026-04-27 19:55:38 - agent-zxf-dsk - INFO - 等待 1s 后重试...
+2026-04-27 19:55:39 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 2/3): 计算机专业...
+2026-04-27 19:56:00 - agent-zxf-dsk - ERROR - DeepSeek API调用异常 (尝试 2): HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+2026-04-27 19:56:00 - agent-zxf-dsk - INFO - 等待 2s 后重试...
+2026-04-27 19:56:02 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 3/3): 计算机专业...
+2026-04-27 19:56:22 - agent-zxf-dsk - ERROR - DeepSeek API调用异常 (尝试 3): HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+2026-04-27 19:56:22 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 65.097秒
+2026-04-27 19:56:22 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 65.097秒
+2026-04-27 19:56:22 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 65.099秒
+2026-04-27 19:56:22 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 65.099秒
+2026-04-27 19:56:22 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=5, 总时间=65.97s
+2026-04-27 19:56:22 - agent-zxf-dsk - WARNING - 请求处理时间过长: 65.97s
+2026-04-27 20:08:12 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:08:13 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:08:13 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:08:13 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:08:13 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:08:13 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:08:13 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:08:16 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:10:13 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:10:53 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:10:59 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:14:15 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:14:21 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:19:54 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:20:00 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:21:12 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:21:17 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:21:32 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:21:32 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:21:32 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:21:32 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:21:32 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:21:32 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:21:32 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:21:38 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:21:38 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:21:38 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:21:38 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:21:38 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:21:38 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:21:38 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:22:10 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:22:10 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:22:10 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:22:10 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:22:10 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:22:10 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:22:10 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:23:08 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:23:08 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:23:08 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:23:08 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:23:08 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:23:08 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:23:08 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:23:14 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:23:14 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:23:14 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:23:14 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:23:14 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:23:14 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:23:14 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:25:22 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:25:22 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:25:22 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:25:22 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:25:22 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:25:22 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:25:22 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:25:28 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:25:28 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:25:28 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:25:28 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:25:28 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:25:28 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:25:28 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:26:08 - agent-zxf-dsk - INFO - 开始处理问题: 2026美伊战争...
+2026-04-27 20:26:08 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge_j 执行时间: 0.056秒
+2026-04-27 20:26:08 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 2026美伊战争...
+2026-04-27 20:26:24 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 16.86s, 回答长度 472
+2026-04-27 20:26:24 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 16.866秒
+2026-04-27 20:26:24 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 16.866秒
+2026-04-27 20:26:24 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm_j 执行时间: 16.868秒
+2026-04-27 20:26:24 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm_j 执行时间过长: 16.868秒
+2026-04-27 20:26:24 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=8, 总时间=16.93s
+2026-04-27 20:26:24 - agent-zxf-dsk - WARNING - 请求处理时间过长: 16.93s
+2026-04-27 20:28:11 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:28:11 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:28:11 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:28:11 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:28:11 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:28:11 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:28:11 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:28:23 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:28:23 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:28:23 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:28:23 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:28:23 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:28:23 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:28:23 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:28:35 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:28:35 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:28:35 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:28:35 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:28:35 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:28:35 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:28:35 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:28:48 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:28:55 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:28:55 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:28:55 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:28:55 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:28:55 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:28:55 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:28:55 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:29:01 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:29:01 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:29:01 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:29:01 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:29:01 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:29:01 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:29:01 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:29:15 - agent-zxf-dsk - INFO - 开始处理问题: 你好，请介绍一下你自己...
+2026-04-27 20:29:15 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 0.014秒
+2026-04-27 20:29:15 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 你好，请介绍一下你自己...
+2026-04-27 20:29:31 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 16.57s, 回答长度 372
+2026-04-27 20:29:31 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 16.578秒
+2026-04-27 20:29:31 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 16.578秒
+2026-04-27 20:29:31 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 16.581秒
+2026-04-27 20:29:31 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 16.581秒
+2026-04-27 20:29:31 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=11, 总时间=16.60s
+2026-04-27 20:29:31 - agent-zxf-dsk - WARNING - 请求处理时间过长: 16.60s
+2026-04-27 20:29:45 - agent-zxf-dsk - INFO - 完整响应缓存命中: 你好，请介绍一下你自己...
+2026-04-27 20:29:57 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:29:57 - agent-zxf-dsk - INFO - 开始处理问题: 你好...
+2026-04-27 20:29:57 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 0.015秒
+2026-04-27 20:29:57 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 你好...
+2026-04-27 20:30:02 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 5.22s, 回答长度 145
+2026-04-27 20:30:02 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 5.222秒
+2026-04-27 20:30:02 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 5.222秒
+2026-04-27 20:30:02 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 5.224秒
+2026-04-27 20:30:02 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 5.224秒
+2026-04-27 20:30:02 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=2, 总时间=5.25s
+2026-04-27 20:30:50 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:30:50 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:30:50 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:30:50 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:30:50 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:30:50 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:30:50 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:30:55 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-27 20:30:56 - agent-zxf-dsk - INFO - 🚀 启动AI张老师服务，端口: 5002
+2026-04-27 20:30:56 - agent-zxf-dsk - INFO -    Word服务地址: http://localhost:3001
+2026-04-27 20:30:56 - agent-zxf-dsk - INFO -    数据库: SQLite (app.db)
+2026-04-27 20:30:56 - agent-zxf-dsk - INFO -    登录页面: http://localhost:5002/login
+2026-04-27 20:30:56 - agent-zxf-dsk - INFO -    密码登录测试: testuser / test123
+2026-04-27 20:30:56 - agent-zxf-dsk - INFO -    手机验证码测试: 13800138000（验证码见终端输出）
+2026-04-27 20:31:32 - agent-zxf-dsk - INFO - 开始处理问题: 计算机专业...
+2026-04-27 20:31:32 - agent-zxf-dsk - ERROR - RAG搜索失败: Client.__init__() got an unexpected keyword argument 'proxies'
+Traceback (most recent call last):
+  File "/Users/xixi/inv-agent/agent-zxf-dsk/app.py", line 96, in optimized_search_knowledge
+    result = search_knowledge(question)
+  File "/Users/xixi/inv-agent/agent-zxf-dsk/services/rag_service.py", line 8, in search_knowledge
+    client = OpenAI(
+        api_key=ALIYUN_API_KEY,
+        base_url=ALIYUN_BASE_URL
+    )
+  File "/Users/xixi/inv-agent/agent-zxf-dsk/venv/lib/python3.14/site-packages/openai/_client.py", line 112, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        version=__version__,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        _strict_response_validation=_strict_response_validation,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/xixi/inv-agent/agent-zxf-dsk/venv/lib/python3.14/site-packages/openai/_base_client.py", line 793, in __init__
+    self._client = http_client or SyncHttpxClientWrapper(
+                                  ~~~~~~~~~~~~~~~~~~~~~~^
+        base_url=base_url,
+        ^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        follow_redirects=True,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: Client.__init__() got an unexpected keyword argument 'proxies'
+2026-04-27 20:31:32 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 0.007秒
+2026-04-27 20:31:32 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 计算机专业...
+2026-04-27 20:31:53 - agent-zxf-dsk - ERROR - DeepSeek API调用异常 (尝试 1): HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+2026-04-27 20:31:53 - agent-zxf-dsk - INFO - 等待 1s 后重试...
+2026-04-27 20:31:54 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 2/3): 计算机专业...
+2026-04-27 20:32:09 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 15.18s, 回答长度 581
+2026-04-27 20:32:09 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 36.583秒
+2026-04-27 20:32:09 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 36.583秒
+2026-04-27 20:32:09 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 36.585秒
+2026-04-27 20:32:09 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 36.585秒
+2026-04-27 20:32:09 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=5, 总时间=36.61s
+2026-04-27 20:32:09 - agent-zxf-dsk - WARNING - 请求处理时间过长: 36.61s

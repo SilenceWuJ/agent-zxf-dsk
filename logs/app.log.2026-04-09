@@ -1,0 +1,63 @@
+2026-04-09 12:11:51 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-09 12:11:51 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-09 12:12:01 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-09 12:12:01 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-09 12:12:07 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-09 12:12:07 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-09 12:13:10 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-09 12:13:10 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-09 12:14:05 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-09 12:14:05 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-09 12:14:11 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-09 12:14:11 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-09 12:14:18 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 你是谁？...
+2026-04-09 12:14:39 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 20.72秒，状态码: 200
+2026-04-09 12:14:46 - agent-zxf-dsk - INFO - 开始处理问题: 文科400分，2026年，报考学校和专业和地区...
+2026-04-09 12:14:47 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 1.087秒
+2026-04-09 12:14:47 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 文科400分，2026年，报考学校和专业和地区...
+2026-04-09 12:15:00 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 13.48s, 回答长度 809
+2026-04-09 12:15:00 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 13.485秒
+2026-04-09 12:15:00 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 13.485秒
+2026-04-09 12:15:00 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 13.486秒
+2026-04-09 12:15:00 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 13.486秒
+2026-04-09 12:15:01 - agent-zxf-dsk - INFO - 函数 optimized_text_to_speech 执行时间: 0.485秒
+2026-04-09 12:15:01 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=23, 总时间=15.06s
+2026-04-09 12:15:01 - agent-zxf-dsk - WARNING - 请求处理时间过长: 15.06s
+2026-04-09 12:15:04 - agent-zxf-dsk - INFO - 应用调用缓存命中: 你是谁？...
+2026-04-09 12:15:04 - agent-zxf-dsk - INFO - 应用ID调用请求: 你好，请介绍一下你自己...
+2026-04-09 12:15:04 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 你好，请介绍一下你自己...
+2026-04-09 12:15:28 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 23.90秒，状态码: 200
+2026-04-09 12:15:28 - agent-zxf-dsk - INFO - 应用ID调用完成，耗时: 23.90秒
+2026-04-09 12:15:38 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-09 12:15:38 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-09 12:16:42 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-09 12:16:42 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-09 12:17:56 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-09 12:17:56 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 简单测试：你好！...
+2026-04-09 12:18:10 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 14.03秒，状态码: 200
+2026-04-09 12:19:34 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 你是谁？...
+2026-04-09 12:19:44 - agent-zxf-dsk - INFO - 应用ID调用请求: 你好，张老师！...
+2026-04-09 12:19:44 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 你好，张老师！...
+2026-04-09 12:19:53 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 18.89秒，状态码: 200
+2026-04-09 12:20:00 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 15.53秒，状态码: 200
+2026-04-09 12:20:00 - agent-zxf-dsk - INFO - 应用ID调用完成，耗时: 15.53秒
+2026-04-09 12:20:00 - agent-zxf-dsk - INFO - 应用ID调用请求: 计算机专业和软件工程哪个更好就业？...
+2026-04-09 12:20:00 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 计算机专业和软件工程哪个更好就业？...
+2026-04-09 12:20:37 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 37.28秒，状态码: 200
+2026-04-09 12:20:37 - agent-zxf-dsk - INFO - 应用ID调用完成，耗时: 37.28秒
+2026-04-09 12:20:37 - agent-zxf-dsk - INFO - 应用ID调用请求: 基于这个情况，我应该怎么选择？...
+2026-04-09 12:20:37 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 参考信息：学生分数在一本线附近，家庭条件一般，对计算机感兴趣但担心竞争太激烈。
+
+问题：基于这个情况...
+2026-04-09 12:21:22 - agent-zxf-dsk - INFO - 应用ID调用请求: 缓存测试：人工智能的未来发展如何？...
+2026-04-09 12:21:22 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 缓存测试：人工智能的未来发展如何？...
+2026-04-09 12:21:55 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 77.86秒，状态码: 200
+2026-04-09 12:21:55 - agent-zxf-dsk - INFO - 应用ID调用完成，耗时: 77.87秒
+2026-04-09 12:22:16 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 54.24秒，状态码: 200
+2026-04-09 12:22:16 - agent-zxf-dsk - INFO - 应用ID调用完成，耗时: 54.24秒
+2026-04-09 16:59:08 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-09 16:59:08 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-09 16:59:22 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-09 16:59:22 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-09 16:59:28 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-09 16:59:28 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002

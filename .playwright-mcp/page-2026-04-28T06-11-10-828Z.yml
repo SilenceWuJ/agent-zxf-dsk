@@ -1,0 +1,38 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e6]: 
+    - heading "Xixi·AI探索之旅" [level=1] [ref=e7]
+    - paragraph [ref=e8]: 我的 AI 学习、实践与创造之路
+  - generic [ref=e9]:
+    - generic [ref=e10]:
+      - generic [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: 
+        - text: 密码登录
+      - generic [ref=e13] [cursor=pointer]:
+        - generic [ref=e14]: 
+        - text: 验证码登录
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]: 
+          - text: 用户名
+        - textbox "请输入用户名" [ref=e20]: testuser
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]: 
+          - text: 密码
+        - textbox "请输入密码" [ref=e24]: test123
+      - button " 登录" [ref=e25] [cursor=pointer]:
+        - generic [ref=e26]: 
+        - text: 登录
+    - text:   
+    - generic [ref=e27]:
+      - paragraph [ref=e28]:
+        - text: 还没有账号？
+        - link "立即注册" [ref=e29] [cursor=pointer]:
+          - /url: /register
+      - paragraph [ref=e30]:
+        - link " 返回首页" [ref=e31] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e32]: 
+          - text: 返回首页

@@ -1,0 +1,38 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e6]: 
+    - heading "AI张老师·数字分身" [level=1] [ref=e7]
+    - paragraph [ref=e8]: 智能教育助手登录
+  - generic [ref=e9]:
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]: 
+          - text: 用户名
+        - textbox " 用户名" [ref=e14]:
+          - /placeholder: 请输入用户名
+          - text: testuser
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]: 
+          - text: 密码
+        - textbox " 密码" [ref=e18]:
+          - /placeholder: 请输入密码
+          - text: test123
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - checkbox "记住我" [ref=e21]
+          - generic [ref=e22]: 记住我
+        - link "忘记密码？" [ref=e23] [cursor=pointer]:
+          - /url: "#"
+      - button " 登录" [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]: 
+        - text: 登录
+    - generic [ref=e26]:
+      - paragraph [ref=e27]:
+        - text: 还没有账号？
+        - link "立即注册" [ref=e28] [cursor=pointer]:
+          - /url: /register
+      - paragraph [ref=e29]:
+        - link "返回首页" [ref=e30] [cursor=pointer]:
+          - /url: /

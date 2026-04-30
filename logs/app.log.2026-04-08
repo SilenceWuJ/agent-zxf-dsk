@@ -1,0 +1,88 @@
+2026-04-08 20:16:34 - agent-zxf-dsk - WARNING - Redis连接失败，降级到内存缓存: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+2026-04-08 20:16:34 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:16:48 - agent-zxf-dsk - WARNING - Redis连接失败，降级到内存缓存: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+2026-04-08 20:16:48 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:18:08 - agent-zxf-dsk - INFO - 开始处理问题: 计算机专业...
+2026-04-08 20:18:10 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 2.035秒
+2026-04-08 20:18:10 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 计算机专业...
+2026-04-08 20:18:19 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 9.45s, 回答长度 411
+2026-04-08 20:18:19 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 9.458秒
+2026-04-08 20:18:19 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 9.458秒
+2026-04-08 20:18:19 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 9.458秒
+2026-04-08 20:18:19 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 9.458秒
+2026-04-08 20:18:19 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=5, 总时间=11.50s
+2026-04-08 20:18:19 - agent-zxf-dsk - WARNING - 请求处理时间过长: 11.50s
+2026-04-08 20:18:53 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:19:12 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:19:12 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:19:18 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:19:18 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:19:23 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:19:23 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:19:37 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:19:37 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:19:47 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:19:47 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:19:54 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:19:54 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:23:53 - agent-zxf-dsk - INFO - 开始处理问题: 测试...
+2026-04-08 20:23:55 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 2.354秒
+2026-04-08 20:23:55 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 测试...
+2026-04-08 20:23:59 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 3.80s, 回答长度 109
+2026-04-08 20:23:59 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 3.799秒
+2026-04-08 20:23:59 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 3.801秒
+2026-04-08 20:23:59 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=2, 总时间=6.16s
+2026-04-08 20:27:06 - agent-zxf-dsk - INFO - 开始处理问题: 计算机专业...
+2026-04-08 20:27:08 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 2.522秒
+2026-04-08 20:27:08 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 计算机专业...
+2026-04-08 20:27:18 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:27:18 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:27:21 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 12.89s, 回答长度 556
+2026-04-08 20:27:21 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 12.890秒
+2026-04-08 20:27:21 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 12.890秒
+2026-04-08 20:27:21 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 12.894秒
+2026-04-08 20:27:21 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 12.894秒
+2026-04-08 20:27:21 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=5, 总时间=15.42s
+2026-04-08 20:27:21 - agent-zxf-dsk - WARNING - 请求处理时间过长: 15.42s
+2026-04-08 20:27:48 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:27:48 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:28:06 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:28:18 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:28:18 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:28:24 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:28:24 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:28:59 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:28:59 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:29:21 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:29:21 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:34:03 - agent-zxf-dsk - INFO - 开始处理问题: 计算机专业...
+2026-04-08 20:34:05 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 1.808秒
+2026-04-08 20:34:05 - agent-zxf-dsk - INFO - LLM缓存命中: 计算机专业...
+2026-04-08 20:34:05 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 0.001秒
+2026-04-08 20:34:05 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=5, 总时间=1.82s
+2026-04-08 20:34:31 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:34:31 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务...
+2026-04-08 20:36:30 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:36:30 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5001
+2026-04-08 20:36:46 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:36:46 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5001
+2026-04-08 20:36:52 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:36:52 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5001
+2026-04-08 20:39:38 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:39:38 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5001
+2026-04-08 20:40:01 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:40:01 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-08 20:40:02 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:40:02 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-08 20:40:06 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-08 20:40:06 - agent-zxf-dsk - INFO - 启动优化版AI张老师服务，端口: 5002
+2026-04-08 20:42:13 - agent-zxf-dsk - INFO - 开始处理问题: 文科报考2026:400分...
+2026-04-08 20:42:14 - agent-zxf-dsk - INFO - 函数 optimized_search_knowledge 执行时间: 1.298秒
+2026-04-08 20:42:14 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 文科报考2026:400分...
+2026-04-08 20:42:26 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 11.97s, 回答长度 508
+2026-04-08 20:42:26 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 11.977秒
+2026-04-08 20:42:26 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 11.977秒
+2026-04-08 20:42:26 - agent-zxf-dsk - INFO - 函数 optimized_ask_llm 执行时间: 11.979秒
+2026-04-08 20:42:26 - agent-zxf-dsk - WARNING - 函数 optimized_ask_llm 执行时间过长: 11.979秒
+2026-04-08 20:42:26 - agent-zxf-dsk - INFO - 请求处理完成: 问题长度=13, 总时间=13.28s
+2026-04-08 20:42:26 - agent-zxf-dsk - WARNING - 请求处理时间过长: 13.28s

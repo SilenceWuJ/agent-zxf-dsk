@@ -1,0 +1,49 @@
+2026-04-10 20:36:01 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 20:36:01 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 你是谁？...
+2026-04-10 20:36:01 - agent-zxf-dsk - ERROR - 应用调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/apps/2b5a7966b6c94f36af8e8c8567fb1357/completion (Caused by NameResolutionError("HTTPSConnection(host='dashscope.aliyuncs.com', port=443): Failed to resolve 'dashscope.aliyuncs.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-04-10 20:36:01 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 参考信息：这是一个测试上下文，包含一些相关信息。
+
+问题：基于上面的信息，你有什么建议？...
+2026-04-10 20:36:01 - agent-zxf-dsk - ERROR - 应用调用异常: HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/apps/2b5a7966b6c94f36af8e8c8567fb1357/completion (Caused by NameResolutionError("HTTPSConnection(host='dashscope.aliyuncs.com', port=443): Failed to resolve 'dashscope.aliyuncs.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-04-10 20:43:42 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 20:43:42 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 你是谁？...
+2026-04-10 20:43:57 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 14.85秒，状态码: 200
+2026-04-10 20:43:57 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 参考信息：这是一个测试上下文，包含一些相关信息。
+
+问题：基于上面的信息，你有什么建议？...
+2026-04-10 20:44:14 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 17.20秒，状态码: 200
+2026-04-10 20:49:36 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 20:49:36 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 你是谁？...
+2026-04-10 20:49:51 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 15.26秒，状态码: 200
+2026-04-10 20:49:51 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 参考信息：这是一个测试上下文，包含一些相关信息。
+
+问题：基于上面的信息，你有什么建议？...
+2026-04-10 20:50:41 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 49.50秒，状态码: 200
+2026-04-10 20:50:41 - agent-zxf-dsk - INFO - 调用阿里云应用ID: fb610534bd5b4951ba9b1dc0bee1713b, 提示词: 知识库ID: jnulz2d020
+
+# 毛泽东智能体对话提示词模板
+## 基于TENSEI系统架构...
+2026-04-10 20:51:27 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 46.14秒，状态码: 200
+2026-04-10 20:51:27 - agent-zxf-dsk - INFO - 应用调用缓存命中: 参考信息：这是一个测试上下文，包含一些相关信息。
+
+问题：基...
+2026-04-10 20:56:03 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 20:56:03 - agent-zxf-dsk - INFO - 调用阿里云应用ID: fb610534bd5b4951ba9b1dc0bee1713b, 提示词: 知识库ID: jnulz2d020
+
+# 毛泽东智能体对话提示词模板
+## 基于TENSEI系统架构...
+2026-04-10 20:57:02 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 59.19秒，状态码: 200
+2026-04-10 20:57:02 - agent-zxf-dsk - INFO - 调用阿里云应用ID: 2b5a7966b6c94f36af8e8c8567fb1357, 提示词: 参考信息：这是一个测试上下文，包含一些相关信息。
+
+问题：基于上面的信息，你有什么建议？...
+2026-04-10 20:58:08 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 65.49秒，状态码: 200
+2026-04-10 20:58:57 - agent-zxf-dsk - INFO - Redis连接成功，使用Redis缓存
+2026-04-10 20:58:57 - agent-zxf-dsk - INFO - 调用阿里云应用ID: fb610534bd5b4951ba9b1dc0bee1713b, 提示词: 知识库ID: jnulz2d020
+
+# 毛泽东智能体对话提示词模板
+## 基于TENSEI系统架构...
+2026-04-10 20:59:31 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 33.31秒，状态码: 200
+2026-04-10 20:59:31 - agent-zxf-dsk - INFO - 调用阿里云应用ID: fb610534bd5b4951ba9b1dc0bee1713b, 提示词: 参考信息：fb610534bd5b4951ba9b1dc0bee1713b
+
+知识库ID: jnul...
+2026-04-10 20:59:53 - agent-zxf-dsk - INFO - 应用调用完成，耗时: 21.99秒，状态码: 200

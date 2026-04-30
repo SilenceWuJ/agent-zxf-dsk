@@ -64,7 +64,7 @@ class FastLLMService:
             messages = self._build_concise_messages(question, context, history)
             
             payload = {
-                "model": "deepseek-chat",
+                "model": "deepseek-v4-pro",
                 "messages": messages,
                 "temperature": 0.7,
                 "max_tokens": self.max_tokens,

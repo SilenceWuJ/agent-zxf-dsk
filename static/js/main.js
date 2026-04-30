@@ -1,4 +1,4 @@
-// AI张老师数字分身 - 主JavaScript文件
+// xixi的AI探索之旅 - 主JavaScript文件
 
 class AIDeZhangChat {
     
@@ -226,7 +226,7 @@ class AIDeZhangChat {
             
         } catch (error) {
             console.error('请求失败:', error);
-            this.addErrorMessage('抱歉，AI张老师暂时无法回答。请稍后再试！');
+            this.addErrorMessage('抱歉，AI助手暂时无法回答。请稍后再试！');
         } finally {
             // 隐藏加载状态
             this.showLoading(false);
@@ -268,7 +268,7 @@ class AIDeZhangChat {
         const messageDiv = document.createElement('div');
         messageDiv.className = 'ai-message';
         messageDiv.setAttribute('role', 'article');
-        messageDiv.setAttribute('aria-label', 'AI张老师的回复');
+        messageDiv.setAttribute('aria-label', 'AI助手的回复');
 
         const time = this.getCurrentTime();
         const audioId = `audio-${Date.now()}`;
@@ -297,7 +297,7 @@ class AIDeZhangChat {
             </div>
             <div class="message-content">
                 <div class="message-header">
-                    <span class="sender-name">AI张老师</span>
+                    <span class="sender-name">AI助手</span>
                     <span class="message-time" aria-label="回复时间：${time}">${time}</span>
                 </div>
                 <div class="message-text">${this.formatAnswer(text)}</div>

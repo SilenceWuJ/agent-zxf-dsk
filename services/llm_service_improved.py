@@ -71,7 +71,7 @@ class LLMService:
         
         # 构建请求载荷
         payload = {
-            "model": "deepseek-chat",
+            "model": "deepseek-v4-pro",
             "messages": messages,
             "temperature": 0.7,
             "max_tokens": self.max_tokens,
@@ -232,7 +232,7 @@ class LLMService:
         
         try:
             test_payload = {
-                "model": "deepseek-chat",
+                "model": "deepseek-v4-pro",
                 "messages": [
                     {"role": "system", "content": "你是一个测试助手，请简单回复'测试成功'。"},
                     {"role": "user", "content": "你好，请回复'测试成功'"}

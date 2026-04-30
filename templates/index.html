@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}AI张老师·志愿咨询助手{% endblock %}
+{% block title %}智研空间 · 志愿规划助手{% endblock %}
 
 {% block content %}
 <div class="app-wrapper">
@@ -12,12 +12,15 @@
                     <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div class="logo-text">
-                    <h1>AI张老师·数字分身</h1>
-                    <p class="subtitle">高考与考研志愿规划专家</p>
+                    <h1>智研空间</h1>
+                    <p class="subtitle">AI 驱动的学业规划与专业咨询平台</p>
                 </div>
             </div>
             <div class="header-tagline">
-                <span class="tagline" aria-label="AI张老师专业领域">专业和报考</span>
+                <span class="tagline" aria-label="AI助手专业领域">专业和报考</span>
+                <a href="/" class="back-to-home" style="margin-left: 15px; color: #667eea; text-decoration: none;">
+                    <i class="fas fa-home"></i> 返回主页
+                </a>
             </div>
         </div>
     </header>
@@ -33,18 +36,18 @@
                     </div>
                     <div class="message-content">
                         <div class="message-header">
-                            <span class="sender-name">AI张老师</span>
+                            <span class="sender-name">AI助手</span>
                             <span class="message-time">现在</span>
                         </div>
                         <div class="message-text">
-                            你好！我是AI张老师。高考志愿、考研选择、专业就业前景帮你指导！
+                            欢迎来到智研空间！我是您的 AI 学业规划顾问。
                             <br><br>
-                            <strong>包括</strong>
+                            <strong>我可以帮您</strong>
                             <ul>
-                                <li>分析不同专业的就业前景</li>
-                                <li>推荐适合普通家庭的专业方向</li>
-                                <li>对比不同院校的优势专业</li>
-                                <li>规划考研和职业发展路径</li>
+                                <li>深度分析专业就业前景与发展趋势</li>
+                                <li>提供个性化的专业选择建议</li>
+                                <li>对比院校实力与优势专业</li>
+                                <li>规划考研方向与职业发展路径</li>
                             </ul>
                         </div>
                     </div>
@@ -138,4 +141,244 @@
 
 {% block scripts %}
 {# JavaScript functionality handled by main.js #}
+<script>
+// Chat history loading functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to load chat history from API
+    async function loadChatHistory() {
+        try {
+            console.log('Loading chat history...');
+            
+            // Show loading state
+            const chatHistory = document.getElementById('chatHistory');
+            if (chatHistory) {
+                const loadingDiv = document.createElement('div');
+                loadingDiv.className = 'loading-history';
+                loadingDiv.innerHTML = '<div class="loading-spinner-small"><i class="fas fa-spinner fa-spin"></i></div><p>加载历史记录...</p>';
+                chatHistory.insertBefore(loadingDiv, chatHistory.firstChild);
+            }
+            
+            // Fetch chat history from API
+            const response = await fetch('/api/chat/history?limit=20');
+            const data = await response.json();
+            
+            // Remove loading indicator
+            const loadingIndicator = document.querySelector('.loading-history');
+            if (loadingIndicator) {
+                loadingIndicator.remove();
+            }
+            
+            if (data.success && data.history && data.history.length > 0) {
+                console.log(`Loaded ${data.history.length} chat history items`);
+                displayChatHistory(data.history);
+            } else {
+                console.log('No chat history found');
+                // Keep the welcome message
+            }
+        } catch (error) {
+            console.error('Error loading chat history:', error);
+            
+            // Remove loading indicator
+            const loadingIndicator = document.querySelector('.loading-history');
+            if (loadingIndicator) {
+                loadingIndicator.remove();
+            }
+        }
+    }
+    
+    // Function to display chat history
+    function displayChatHistory(history) {
+        const chatHistory = document.getElementById('chatHistory');
+        if (!chatHistory) return;
+        
+        // Clear existing content except welcome message
+        const welcomeMessage = document.querySelector('.welcome-message');
+        chatHistory.innerHTML = '';
+        
+        // Re-add welcome message if it exists
+        if (welcomeMessage) {
+            chatHistory.appendChild(welcomeMessage);
+        }
+        
+        // Add history items
+        history.forEach(item => {
+            const messageDiv = document.createElement('div');
+            
+            if (item.message_type === 'user') {
+                messageDiv.className = 'user-message';
+                messageDiv.innerHTML = `
+                    <div class="message-avatar user" aria-hidden="true">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="message-content user">
+                        <div class="message-header">
+                            <span class="sender-name">你</span>
+                            <span class="message-time">${formatTime(item.created_at)}</span>
+                        </div>
+                        <div class="message-text">${escapeHtml(item.content)}</div>
+                    </div>
+                `;
+            } else if (item.message_type === 'assistant') {
+                messageDiv.className = 'ai-message';
+                messageDiv.innerHTML = `
+                    <div class="message-avatar" aria-hidden="true">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="sender-name">AI助手</span>
+                            <span class="message-time">${formatTime(item.created_at)}</span>
+                        </div>
+                        <div class="message-text">${escapeHtml(item.content)}</div>
+                        ${item.response_time ? `<div class="response-time">响应时间: ${item.response_time.toFixed(2)}秒</div>` : ''}
+                    </div>
+                `;
+            }
+            
+            chatHistory.appendChild(messageDiv);
+        });
+        
+        // Scroll to bottom
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+    }
+    
+    // Helper function to format time
+    function formatTime(isoString) {
+        if (!isoString) return '刚刚';
+        
+        const date = new Date(isoString);
+        const now = new Date();
+        const diffMs = now - date;
+        const diffMins = Math.floor(diffMs / 60000);
+        const diffHours = Math.floor(diffMs / 3600000);
+        const diffDays = Math.floor(diffMs / 86400000);
+        
+        if (diffMins < 1) return '刚刚';
+        if (diffMins < 60) return `${diffMins}分钟前`;
+        if (diffHours < 24) return `${diffHours}小时前`;
+        if (diffDays < 7) return `${diffDays}天前`;
+        
+        // For older dates, show actual date
+        return date.toLocaleDateString('zh-CN', {
+            month: 'short',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+    }
+    
+    // Helper function to escape HTML
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+    
+    // Load chat history when page loads
+    loadChatHistory();
+    
+    // Add CSS for loading indicator
+    const style = document.createElement('style');
+    style.textContent = `
+        .loading-history {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .loading-spinner-small {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #3498db;
+        }
+        
+        .response-time {
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        .user-message {
+            display: flex;
+            margin-bottom: 20px;
+            justify-content: flex-end;
+        }
+        
+        .user-message .message-avatar.user {
+            order: 2;
+            margin-left: 10px;
+            margin-right: 0;
+        }
+        
+        .user-message .message-content.user {
+            order: 1;
+            background-color: #3498db;
+            color: white;
+            border-radius: 15px 15px 0 15px;
+        }
+        
+        .ai-message {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .ai-message .message-avatar {
+            margin-right: 10px;
+        }
+        
+        .ai-message .message-content {
+            background-color: #f8f9fa;
+            border-radius: 15px 15px 15px 0;
+        }
+        
+        .message-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e74c3c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .message-avatar.user {
+            background-color: #3498db;
+        }
+        
+        .message-content {
+            max-width: 70%;
+            padding: 12px 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+        }
+        
+        .sender-name {
+            font-weight: bold;
+        }
+        
+        .message-time {
+            color: #95a5a6;
+            font-size: 0.8rem;
+        }
+        
+        .message-text {
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    `;
+    document.head.appendChild(style);
+});
+</script>
 {% endblock %}

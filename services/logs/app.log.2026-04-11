@@ -1,0 +1,10 @@
+2026-04-11 09:58:28 - agent-zxf-dsk - INFO - DeepSeek API连接测试成功
+2026-04-11 09:58:28 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 美伊战争预测？...
+2026-04-11 09:58:41 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 12.80s, 回答长度 511
+2026-04-11 09:58:41 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 12.801秒
+2026-04-11 09:58:41 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 12.801秒
+2026-04-11 10:05:21 - agent-zxf-dsk - INFO - DeepSeek API连接测试成功
+2026-04-11 10:05:21 - agent-zxf-dsk - INFO - 调用DeepSeek API (尝试 1/3): 美伊战争预测？...
+2026-04-11 10:05:33 - agent-zxf-dsk - INFO - DeepSeek API调用成功: 耗时 12.15s, 回答长度 677
+2026-04-11 10:05:33 - agent-zxf-dsk - INFO - 函数 ask_llm 执行时间: 12.151秒
+2026-04-11 10:05:33 - agent-zxf-dsk - WARNING - 函数 ask_llm 执行时间过长: 12.151秒

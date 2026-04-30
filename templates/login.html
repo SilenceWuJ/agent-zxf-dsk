@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 智研空间</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Noto Sans SC', sans-serif; }
+
+        /* ===== 深色玻璃态背景 ===== */
+        .auth-container {
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0c1445 0%, #1a1f5c 30%, #2d1b4e 60%, #1d3a5c 100%);
+            padding: 20px;
+        }
+
+        /* ===== 玻璃态卡片 (Web 自适应) ===== */
+        .auth-card {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 24px;
+            box-shadow: 0 24px 48px rgba(0,0,0,0.3);
+            width: min(460px, 94vw);
+            overflow: hidden;
+            animation: fadeSlideUp 0.5s ease-out;
+        }
+
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== 头部 ===== */
+        .auth-header {
+            background: linear-gradient(135deg, #00f5d4 0%, #00d4ff 50%, #7b68ee 100%);
+            color: white;
+            padding: 28px 24px 22px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .auth-header::before {
+            content: '';
+            position: absolute;
+            top: -60%; right: -60%;
+            width: 180%; height: 180%;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+            background-size: 32px 32px;
+            pointer-events: none;
+        }
+        .auth-logo {
+            font-size: 36px; margin-bottom: 8px;
+            position: relative; z-index: 1;
+        }
+        .auth-title {
+            font-size: 22px; font-weight: 700; margin-bottom: 4px;
+            position: relative; z-index: 1;
+        }
+        .auth-subtitle {
+            font-size: 13px; opacity: 0.85;
+            position: relative; z-index: 1;
+        }
+
+        /* ===== 主体 ===== */
+        .auth-body { padding: 24px; }
+
+        /* ===== 双 Tab ===== */
+        .auth-tabs {
+            display: flex; margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+        }
+        .auth-tab {
+            flex: 1; text-align: center; padding: 10px;
+            cursor: pointer; font-size: 14px; font-weight: 500;
+            color: rgba(255,255,255,0.40);
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+        }
+        .auth-tab:hover { color: rgba(255,255,255,0.70); }
+        .auth-tab.active {
+            color: #00f5d4;
+            border-bottom-color: #00f5d4;
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* ===== 表单 ===== */
+        .form-group { margin-bottom: 16px; }
+        .form-group label {
+            display: block; margin-bottom: 5px;
+            font-weight: 500; color: rgba(255,255,255,0.75);
+            font-size: 13px;
+        }
+        .form-group label i { margin-right: 6px; width: 16px; text-align: center; }
+
+        .form-group input {
+            width: 100%; padding: 10px 14px;
+            background: rgba(255,255,255,0.07);
+            border: 1.5px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            font-size: 14px; color: white;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .form-group input::placeholder {
+            color: rgba(255,255,255,0.30);
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #00f5d4;
+            background: rgba(255,255,255,0.10);
+            box-shadow: 0 0 0 3px rgba(0,245,212,0.10);
+        }
+        .form-group input.error {
+            border-color: #ff6b6b;
+        }
+
+        .error-message {
+            color: #ff6b6b;
+            font-size: 12px; margin-top: 3px;
+            display: none;
+        }
+
+        /* ===== 发送验证码按钮 ===== */
+        .send-code-btn {
+            padding: 10px 14px; white-space: nowrap;
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.70);
+            border: 1.5px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            font-size: 13px; font-weight: 500; cursor: pointer;
+            transition: all 0.3s; min-width: 100px;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .send-code-btn:hover {
+            background: rgba(255,255,255,0.12);
+            color: white;
+        }
+        .send-code-btn:disabled {
+            opacity: 0.4; cursor: not-allowed;
+        }
+        .send-code-btn.sending {
+            background: linear-gradient(135deg, #00f5d4 0%, #00d4ff 100%);
+            color: white; border-color: transparent;
+        }
+
+        /* ===== Alert 消息 ===== */
+        .alert {
+            padding: 10px 14px; border-radius: 10px;
+            margin-bottom: 16px; display: none;
+            font-size: 13px;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .alert-success {
+            background: rgba(46,204,113,0.15);
+            color: #2ecc71;
+            border: 1px solid rgba(46,204,113,0.25);
+        }
+        .alert-error {
+            background: rgba(255,107,107,0.15);
+            color: #ff6b6b;
+            border: 1px solid rgba(255,107,107,0.25);
+        }
+        .alert-info {
+            background: rgba(0,245,212,0.15);
+            color: #00f5d4;
+            border: 1px solid rgba(0,245,212,0.25);
+        }
+
+        /* ===== 登录按钮 ===== */
+        .auth-button {
+            width: 100%; padding: 12px;
+            background: linear-gradient(135deg, #00f5d4 0%, #00d4ff 100%);
+            color: white; border: none; border-radius: 10px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Noto Sans SC', sans-serif;
+            display: flex; justify-content: center; align-items: center;
+            gap: 8px;
+        }
+        .auth-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,245,212,0.25);
+        }
+        .auth-button:active {
+            transform: translateY(0);
+        }
+        .auth-button:disabled {
+            opacity: 0.5; cursor: not-allowed;
+            transform: none; box-shadow: none;
+        }
+
+        /* ===== 页脚 ===== */
+        .auth-footer {
+            text-align: center; margin-top: 20px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .auth-footer p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.35);
+            margin: 4px 0;
+        }
+        .auth-footer a {
+            color: #00f5d4;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .auth-footer a:hover {
+            color: #00d4ff;
+            text-decoration: underline;
+        }
+
+        /* ===== 响应式 (Web 自适应) ===== */
+        /* 桌面端 */
+        @media (min-width: 768px) {
+            .auth-card { width: min(460px, 85vw); }
+            .auth-header { padding: 36px 32px 28px; }
+            .auth-body { padding: 32px; }
+            .auth-logo { font-size: 42px; }
+            .auth-title { font-size: 26px; }
+            .auth-subtitle { font-size: 14px; }
+            .form-group label { font-size: 14px; }
+            .form-group input { padding: 12px 16px; font-size: 15px; }
+            .auth-button { padding: 14px; font-size: 16px; }
+            .auth-footer p { font-size: 14px; }
+        }
+        /* 平板 */
+        @media (min-width: 481px) and (max-width: 767px) {
+            .auth-card { width: min(440px, 92vw); }
+            .auth-header { padding: 28px 24px 22px; }
+            .auth-body { padding: 24px; }
+            .auth-logo { font-size: 36px; }
+            .auth-title { font-size: 22px; }
+        }
+        /* 手机 */
+        @media (max-width: 480px) {
+            .auth-card { width: 100%; border-radius: 18px; }
+            .auth-header { padding: 22px 18px 18px; }
+            .auth-body { padding: 18px; }
+            .auth-logo { font-size: 30px; }
+            .auth-title { font-size: 19px; }
+            .auth-subtitle { font-size: 12px; }
+            .form-group input { font-size: 14px; padding: 10px 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Header -->
+            <div class="auth-header">
+                <div class="auth-logo"><i class="fas fa-brain"></i></div>
+                <h1 class="auth-title">智研空间</h1>
+                <p class="auth-subtitle">AI 驱动的智能工作平台</p>
+            </div>
+            <div class="auth-body">
+                <!-- 消息提示 -->
+                <div id="messageAlert" class="alert" style="display: none;"></div>
+
+                <!-- Tab 切换 -->
+                <div class="auth-tabs">
+                    <div class="auth-tab active" data-tab="password" onclick="switchTab('password')">
+                        <i class="fas fa-lock"></i> 密码登录
+                    </div>
+                    <div class="auth-tab" data-tab="phone" onclick="switchTab('phone')">
+                        <i class="fas fa-mobile-alt"></i> 验证码登录
+                    </div>
+                </div>
+
+                <!-- ===== Tab 1: 密码登录 ===== -->
+                <div id="tabPassword" class="tab-content active">
+                    <form id="passwordForm" class="auth-form">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> 用户名</label>
+                            <input type="text" id="username" placeholder="请输入用户名" required>
+                            <div id="usernameError" class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> 密码</label>
+                            <input type="password" id="password" placeholder="请输入密码" required>
+                            <div id="passwordError" class="error-message"></div>
+                        </div>
+                        <button type="submit" class="auth-button">
+                            <i class="fas fa-sign-in-alt"></i> 登录
+                        </button>
+                    </form>
+                </div>
+
+                <!-- ===== Tab 2: 验证码登录 ===== -->
+                <div id="tabPhone" class="tab-content">
+                    <form id="phoneForm" class="auth-form">
+                        <div class="form-group">
+                            <label><i class="fas fa-mobile-alt"></i> 手机号</label>
+                            <input type="tel" id="phoneInput" placeholder="请输入手机号" maxlength="11" required>
+                            <div id="phoneError" class="error-message"></div>
+                        </div>
+                        <div class="form-group" style="position:relative;">
+                            <label><i class="fas fa-key"></i> 验证码</label>
+                            <div style="display:flex; gap:8px;">
+                                <input type="text" id="codeInput" placeholder="请输入验证码" maxlength="6" style="flex:1;" required>
+                                <button type="button" id="sendCodeBtn" class="send-code-btn" onclick="sendCode()">
+                                    获取验证码
+                                </button>
+                            </div>
+                            <div id="codeError" class="error-message"></div>
+                        </div>
+                        <button type="submit" class="auth-button">
+                            <i class="fas fa-mobile-alt"></i> 验证码登录
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Footer -->
+                <div class="auth-footer">
+                    <p>还没有账号？ <a href="{{ url_for('register') }}">立即注册</a></p>
+                    <p><a href="{{ url_for('home') }}"><i class="fas fa-arrow-left"></i> 返回首页</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>
