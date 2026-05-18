@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 · 吴君茹</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="/static/css/portfolio.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Back Button -->
+        <button class="back-btn" onclick="location.href='/'">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回主页</span>
+        </button>
+
+        <!-- Header -->
+        <div class="header">
+            <h1>作品集</h1>
+            <p class="subtitle">AI 驱动的创新项目 · 探索技术与实践的结合</p>
+        </div>
+
+        <!-- Works Grid -->
+        <div class="works-grid">
+            <!-- VibeCoding -->
+            <div class="work-card">
+                <div class="work-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="work-content">
+                    <div class="work-header">
+                        <h3>个人 VibeCoding 平台</h3>
+                        <span class="work-status">进行中</span>
+                    </div>
+                    <p class="work-description">
+                        使用 Claude Code/dsk 等尝试独立开发并部署的个人 AI 工作平台，探索 VibeCoding 的具体落地。
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Vue</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">LLM API</span>
+                        <span class="tech-tag">MCP</span>
+                    </div>
+                    <div class="work-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Agent 架构设计，多智能体协作流程</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>深度集成主流大模型 API</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>RAG 知识库检索与流式对话</span>
+                        </div>
+                    </div>
+                    <a href="https://www.zxfagent-ai.top" target="_blank" class="work-link">
+                        访问平台 <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Goose+MCP -->
+            <div class="work-card">
+                <div class="work-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <div class="work-content">
+                    <div class="work-header">
+                        <h3>Goose + MCP 自动化 QA 系统</h3>
+                        <span class="work-status completed">已完成</span>
+                    </div>
+                    <p class="work-description">
+                        基于 AI Agent 的自动化测试工作流，实现「需求解析 → 用例生成 → 执行 → 报告」的闭环。
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">MCP 协议</span>
+                        <span class="tech-tag">pytest</span>
+                        <span class="tech-tag">AI Agent</span>
+                    </div>
+                    <div class="work-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>MCP 服务器封装 pytest 执行器</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>AI Agent 调用自动化测试工具</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>全流程 QA 自动化闭环</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Agent 对话 -->
+            <div class="work-card">
+                <div class="work-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="work-content">
+                    <div class="work-header">
+                        <h3>AI Agent 智能对话网站</h3>
+                        <span class="work-status completed">Demo</span>
+                    </div>
+                    <p class="work-description">
+                        基于新闻中某老师逝去而做的智能对话网站，接入院校数据库实现垂直场景应用。
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">RAG 架构</span>
+                        <span class="tech-tag">院校数据库</span>
+                        <span class="tech-tag">Flask</span>
+                    </div>
+                    <div class="work-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>高考志愿规划场景应用</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>考研规划智能咨询</span>
+                        </div>
+                    </div>
+                    <a href="/cyborg" class="work-link">
+                        查看演示 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Word 文档填充工具 -->
+            <div class="work-card">
+                <div class="work-icon">
+                    <i class="fas fa-file-word"></i>
+                </div>
+                <div class="work-content">
+                    <div class="work-header">
+                        <h3>Word 文档智能填充工具</h3>
+                        <span class="work-status completed">已完成</span>
+                    </div>
+                    <p class="work-description">
+                        为资产评估公司设计的文档填充工具，支持语音输入与 AI 排版检查。
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">大模型 API</span>
+                        <span class="tech-tag">语音识别</span>
+                    </div>
+                    <div class="work-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>智能识别占位符</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>语音输入填写</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>AI 排版检查</span>
+                        </div>
+                    </div>
+                    <a href="/word/" class="work-link">
+                        使用工具 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2024 吴君茹 · 作品集</p>
+        </div>
+    </div>
+</body>
+</html>

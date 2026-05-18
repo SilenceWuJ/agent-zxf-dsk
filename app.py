@@ -529,15 +529,12 @@ def clear_cache():
 
 @app.route("/", methods=["GET"])
 def home():
-    """主页选择页面 - 未登录跳转登录页"""
-    if not current_user.is_authenticated:
-        return redirect(url_for('login'))
+    """主页 - 个人展示"""
     return render_template("home.html")
 
 @app.route("/home", methods=["GET"])
-@login_required
 def home_page():
-    """主页面（需登录）"""
+    """主页面"""
     return render_template("home.html")
 
 
@@ -661,28 +658,104 @@ def api_user_info():
     return jsonify({"success": False, "message": "未登录"}), 401
 
 @app.route("/cyborg", methods=["GET"])
-@login_required
 def cyborg_index():
     """赛博人·AI智能体选择页面"""
     return render_template("cyborg.html")
 
 @app.route("/standard", methods=["GET"])
-@login_required
 def standard_index():
     """标准版主页面"""
     return render_template("index.html")
 
 @app.route("/app", methods=["GET"])
-@login_required
 def app_index():
     """应用版主页面"""
     return render_template("app_index.html")
 
 @app.route("/pedu", methods=["GET"])
-@login_required
 def pedu_index():
     """教育版主页面"""
     return render_template("pedu_index.html")
+
+
+@app.route("/feature-card", methods=["GET"])
+def feature_card_page():
+    """功能卡片页面"""
+    return render_template("feature_card.html")
+
+
+@app.route("/api/features", methods=["GET"])
+def get_features():
+    """获取功能卡片数据 API"""
+    features = [
+        {
+            "id": "smart-chat",
+            "title": "智能对话",
+            "description": "与专业 AI 智能体进行深度对话，获取学业规划、专业咨询、历史思辨等方面的建议。",
+            "icon": "fa-comments",
+            "color": "primary",
+            "tags": ["多轮对话", "智能记忆", "实时响应"],
+            "stats": {"agents": "3 个智能体", "availability": "24/7"},
+            "status": "active",
+            "url": "/cyborg"
+        },
+        {
+            "id": "word-tool",
+            "title": "文档智能填充",
+            "description": "上传 Word 模板，智能识别占位符，支持语音输入填写，AI 排版检查，在线编辑下载。",
+            "icon": "fa-file-word",
+            "color": "secondary",
+            "tags": ["语音输入", "AI 检查", "在线编辑"],
+            "stats": {"format": "多格式支持"},
+            "status": "active",
+            "url": "/word/"
+        },
+        {
+            "id": "qa-platform",
+            "title": "QA 测试管理",
+            "description": "测试用例管理、需求跟踪、执行监控、缺陷报告一站式平台，支持 WebSocket 实时通信。",
+            "icon": "fa-flask",
+            "color": "accent",
+            "tags": ["用例管理", "需求跟踪", "实时通知"],
+            "stats": {"update": "实时更新"},
+            "status": "beta",
+            "url": "http://localhost:8080/dashboard"
+        },
+        {
+            "id": "knowledge-base",
+            "title": "知识库检索",
+            "description": "基于向量数据库的知识检索系统，快速查找相关文档内容，支持语义搜索和模糊匹配。",
+            "icon": "fa-database",
+            "color": "purple",
+            "tags": ["向量检索", "语义搜索", "智能匹配"],
+            "stats": {"docs": "海量文档"},
+            "status": "active",
+            "url": "/knowledge"
+        },
+        {
+            "id": "data-analysis",
+            "title": "数据分析",
+            "description": "可视化数据分析工具，支持多维度数据展示，生成分析报告，辅助决策制定。",
+            "icon": "fa-chart-line",
+            "color": "pink",
+            "tags": ["可视化", "多维度", "报告生成"],
+            "stats": {"charts": "图表丰富"},
+            "status": "new",
+            "url": "/analysis"
+        },
+        {
+            "id": "settings",
+            "title": "系统设置",
+            "description": "配置系统参数、API 密钥、缓存设置等，管理用户账户和权限。",
+            "icon": "fa-cog",
+            "color": "primary",
+            "tags": ["参数配置", "权限管理"],
+            "stats": {"security": "安全设置"},
+            "status": "active",
+            "url": "/settings"
+        }
+    ]
+    return jsonify({"success": True, "features": features})
 
 
 @app.route("/app/chat", methods=["POST"])
@@ -1111,6 +1184,22 @@ def word_health_check():
         "word_service_url": WORD_SERVICE_URL,
         "flask_port": int(os.environ.get("PORT", 5004))
     })
+
+# ==================== 个人展示页面路由 ====================
+@app.route("/resume")
+def resume_page():
+    """个人简历页面"""
+    return render_template("resume.html")
+
+@app.route("/portfolio")
+def portfolio_page():
+    """作品集页面"""
+    return render_template("portfolio.html")
+
+@app.route("/projects")
+def projects_page():
+    """项目经历页面"""
+    return render_template("projects.html")
 
 if __name__ == "__main__":
     import os
